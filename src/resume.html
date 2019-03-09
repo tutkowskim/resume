@@ -6,130 +6,45 @@
     <meta name="viewport" content="width=device-width" />
     <meta charset="UTF-8"> 
     
-    <link type="text/css" rel="stylesheet" href="resume.css" />
-    <link href='https://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css"  href="resume.css" />
+    <link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <div id="resume">
-        <div id="contactInformation">
-            <div id="name">
-                <h1>Mark Tutkowski</h1>
-                <h2>Software Engineer</h2>
-            </div>
-            <div id="contactDetails">
-                <ul>
-                    <li><a target="_blank" href="https://www.tutkowski.com">https://www.tutkowski.com</a></li>
-                    <li><a target="_blank" href="https://github.com/tutkowskim">https://github.com/tutkowskim</a></li>
-                    <li><a target="_blank" href="https://www.linkedin.com/in/marktutkowski/">https://www.linkedin.com/in/MarkTutkowski</a></li>
-                </ul>
-            </div>
-            <div class="clear"></div>
+    <article class="resume">
+        <div class="side_content">
+            <div class="side_content__item side_content_title">Mark Tutkowski</div>
+            <div class="side_content__item side_content_subtitle">Software Engineer</div>
+            <div class="side_content__header"><div class="side_content__item">Personal Info</div></div>
+            <div class="side_content__item"><a href="tel:##########"><i class="fa fa-phone"></i> ###-###-#####</a></div>
+            <div class="side_content__item"><a href="mailto:mark@tutkowski.com"><i class="fa fa-envelope"></i> mark@tutkowski.com</a></div>
+            <div class="side_content__item"><a target="_blank" href="https://www.tutkowski.com"><i class="fa fa-globe"></i> www.tutkowski.com</a></div>
+            <div class="side_content__item"><a target="_blank" href="https://github.com/tutkowskim"><i class="fa fa-github"></i> www.github.com/tutkowskim</a></div>
+            <div class="side_content__item"><a target="_blank" href="https://www.linkedin.com/in/marktutkowski"><i class="fa fa-linkedin-square"></i> www.linkedin.com/in/MarkTutkowski</a></div>
+            <div class="side_content__header"><div class="side_content__item">Programming Languages (Proficient)</div></div>
+            <div class="side_content__item">Angular</div>
+            <div class="side_content__item">C#</div>
+            <div class="side_content__item">Java</div>
+            <div class="side_content__header"><div class="side_content__item">Programming Languages (Familiar)</div></div>
+            <div class="side_content__item">C++</div>
+            <div class="side_content__item">Python</div>
+            <div class="side_content__item">NodeJS</div>
+            <div class="side_content__header"><div class="side_content__item">Development Tools & Practices</div></div>
+            <div class="side_content__item">Scaled Agile Framework</div>
+            <div class="side_content__item">Scrum</div>
+            <div class="side_content__item">Git</div>
+            <div class="side_content__item">Gradle</div>
+            <div class="side_content__header"><div class="side_content__item">Soft Skills</div></div>
         </div>
-        
-        <div id="details">
-            <section>
-                <article>
-                    <div class="sectionTitle">
-                        <h1>Summary</h1>
-                    </div>
-                    <div class="sectionContent">
-                        <p>Software Engineer with 5+ years developing robust software across multiple disciplines. Worked ahead of teams as part of a scrum of team architects to create proof of concepts, discover the unknowns, and create designs for feature teams to execute on. Mentored co-ops and interns as they started their careers in software and test engineering.</p>
-                    </div>
-                </article>
-                <div class="clear"></div>
-            </section>
-            
-            <section>
-                <article>
-                    <div class="sectionTitle">
-                        <h1>Skill Highlights</h1>
-                    </div>
-                    <div class="sectionContent">
-                        <ul class="multi-column">
-                            <li>Agile</li>
-                            <li>SAFe</li>
-                            <li>C++</li>
-                            <li>C#</li>
-                            <li>Java</li>
-                            <li>Python</li>
-                            <li>Git</li>
-                            <li>Gradle</li>
-                        </ul>
-                    </div>
-                </article>
-                <div class="clear"></div>
-            </section>
-            
-            <section>
-                <article>
-                    <div class="sectionTitle">
-                        <h1>Experience</h1>
-                    </div>
-                    <div class="sectionContent">
-                        <div>
-                            <h2>Rockwell Automation</h2>
-                            <article>
-                                <p class="subDetails" style="float:right;">May 2018 - Present</p>
-                                <p class="subDetails">Senior Software Engineer</p>
-                                <p class="subDetails" style="float:right;">October 2016 - May 2018</p>
-                                <p class="subDetails">Software Engineer</p>
-                                <p class="subDetails" style="float:right;">June 2015 - October 2016</p>
-                                <p class="subDetails">Associate Software Engineer</p>
-                                <p class="subDetails" style="float:right;">June 2012 – June 2015</p>
-                                <p class="subDetails">Student Associate</p>
-                                <p/>
-                            </article>
-                            <article>
-                                <h3>Responsibilities</h3>
-                                <ul class="subDetailsList">
-                                    <li>Break down requested features into incremental stories</li>
-                                    <li>Create unit and automated functional tests for new features</li>
-                                    <li>Implement features for the next generation of HMIs</li>
-                                    <li>Work ahead of feature teams as a team architect reducing risk</li>
-                                    <li>Mentor student associates in test and software engineering</li>
-                                </ul>
-                            </article>
-                            <article>
-                                <h3>Achievements</h3>
-                                <ul class="subDetailsList">
-                                    <li>Innovation Award from Rockwell Automation for design allowing the configuration of an HMI project loaded from remote media</li>
-                                    <li>Helped convert the build process from manually handoffs to a fully automated build pipeline, which decreased the promotion time for a full stack build from days to only a few hours</li>
-                                    <li>Created puppet scripts to automatically provision build agents</li>
-                                    <li>Converted installer source code from InstallShield to Wix</li>
-                                </ul>
-                            </article>
-                        <div>
-                    </div>
-                </article>
-                <div class="clear"></div>
-            </section>
-            
-            <section>
-                <article>
-                    <div class="sectionTitle">
-                        <h1>Education</h1>
-                    </div>
-                    <div class="sectionContent">
-                        <article>
-                            <h2>Milwaukee School of Engineering</h2>
-                            <p class="subDetails" style="float:right;">August 2011 – May 2015</p>
-                            <p class="subDetails">Bachelor of Science in Computer Engineering</p>
-                            <p class="subDetails">Minor in Mathematics</p>
-                            <p/>
-                        </article>
-                        
-                        <article>
-                            <h2>Czech Technical University in Prague</h2>
-                            <p class="subDetails" style="float:right;">February 2013 – June 2013</p>
-                            <p class="subDetails">Foreign Exchange</p>
-                            <p/>
-                        </article>
-                    </div>
-                </article>
-                <div class="clear"></div>
-            </section>
+        <div class="main_content">
+            Main Content
         </div>
-    </div>
+    </article>
 </body>
 </html>
+
+
+
+
+
