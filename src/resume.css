@@ -46,11 +46,20 @@ body {
     background: #191a1c;
 }
 
-
-
 .main_content {
     display: flex;
     flex-direction: column;
     flex-basis: 5.75in;
     overflow: hidden;
+}
+
+.main_content__item {
+    font-size: 12px;
+    margin: 10px 10px 10px 10px;
+}
+
+.main_content__header {
+    border-top: 1px solid #5b5d63;
+    border-bottom: 1px solid #5b5d63;
+    font-size: 20px;
 }
