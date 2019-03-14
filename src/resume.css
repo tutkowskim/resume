@@ -4,7 +4,7 @@ body {
 }
 
 .resume {
-    width: 8in;
+    width: 8.5in;
     height: 11in;
     overflow: hidden;
     display: flex;
@@ -62,7 +62,7 @@ body {
 .main_content {
     display: flex;
     flex-direction: column;
-    flex-basis: 5.7in;
+    flex-basis: 6.2in;
     overflow: hidden;
 }
 
@@ -76,7 +76,7 @@ body {
 }
 
 .main_content__header {
-    width: 100%;
+    width: calc(100% - 20px);
     margin: 10px 10px 10px 10px;
     border-top: 1px solid #5b5d63;
     border-bottom: 1px solid #5b5d63;
