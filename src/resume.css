@@ -15,7 +15,7 @@ body {
     width: 100%;
 }
 
-.row__item {
+.row__item__grow {
     flex: 1 1 auto;
 }
 
