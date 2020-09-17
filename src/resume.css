@@ -100,3 +100,13 @@ body {
 .main_content__item a:hover {
     color: #5b5d63;
 }
+
+.projects_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projects_list__project {
+    width: 50%;
+    margin-bottom: 10px;
+}
