@@ -1,0 +1,2 @@
+const summary = 'Software Engineer with over eight years experience developing robust software across multiple disciplines. Worked ahead of teams as part of a scrum of team architects to create proof of concepts, discover the unknowns, and create designs for feature teams to execute on. Mentored co-ops and interns as they started their careers in software and test engineering.';
+export default summary;
