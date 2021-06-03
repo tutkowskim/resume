@@ -1,7 +1,10 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobe, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import SideBarGroup from './SideBarGroup';
 
-function SideBarContactInformation(props) {
+function ContactInformation(props) {
   const {
     phoneNumber,
     email,
@@ -17,22 +20,23 @@ function SideBarContactInformation(props) {
 
   const items = [
     <a href={`tel:${phoneNumber}`}>
-      <i className="fa fa-phone" />
+      <FontAwesomeIcon icon={faPhone} />
       {' '}
       {phoneNumber}
     </a>,
     <a target="_blank" href={website} rel="noreferrer">
+      <FontAwesomeIcon icon={faGlobe} />
       <i className="fa fa-globe" />
       {' '}
       {personalWebsiteDisplayValue}
     </a>,
     <a target="_blank" href={`mailto:${email}`} rel="noreferrer">
-      <i className="fa fa-envelope" />
+      <FontAwesomeIcon icon={faEnvelope} />
       {' '}
       {email}
     </a>,
     <a target="_blank" href={linkedIn} rel="noreferrer">
-      <i className="fa fa-linkedin-square" />
+      <FontAwesomeIcon icon={faLinkedin} />
       {' '}
       {linkedinDisplayValue}
     </a>,
@@ -40,4 +44,4 @@ function SideBarContactInformation(props) {
   return <SideBarGroup title="Contact Information" items={items} />;
 }
 
-export default SideBarContactInformation;
+export default ContactInformation;

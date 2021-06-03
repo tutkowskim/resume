@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MainContentEducation(props) {
+function Education(props) {
   const {
     institution,
     location,
@@ -22,4 +22,4 @@ function MainContentEducation(props) {
   );
 }
 
-export default MainContentEducation;
+export default Education;

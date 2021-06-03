@@ -1,6 +1,6 @@
 import React from 'react';
 import SideBarGroup from './SideBarGroup';
-import ContactInformation from './SideBarContactInformation';
+import ContactInformation from './ContactInformation';
 
 import {
   personalInformation,
@@ -9,7 +9,7 @@ import {
   developmentTools,
   softSkills,
   hardSkills,
-} from './data';
+} from '../data';
 
 function SideBar() {
   return (

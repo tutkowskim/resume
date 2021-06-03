@@ -1,15 +1,15 @@
 import React from 'react';
-import Group from './MainContentGroup';
-import Experience from './MainContentExperience';
-import Education from './MainContentEducation';
-import Projects from './MainContentPersonalProjects';
+import Group from './Group';
+import Experience from './Experience';
+import Education from './Education';
+import Projects from './PersonalProjects';
 
 import {
   summary,
   experience,
   education,
   projects,
-} from './data';
+} from '../data';
 
 function MainContent() {
   return (

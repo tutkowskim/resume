@@ -21,7 +21,7 @@
 .side_content {
   display: flex;
   flex-direction: column;
-  flex-basis: 2.3in;
+  flex-basis: 2.4in;
   background: #2d2f33;
   overflow: hidden;
   color: white;
@@ -57,7 +57,7 @@
 .main_content {
   display: flex;
   flex-direction: column;
-  flex-basis: 6.2in;
+  flex-basis: 6.1in;
   overflow: hidden;
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MainContentGroup(props) {
+function Group(props) {
   const { title, children } = props;
   return (
     <>
@@ -14,4 +14,4 @@ function MainContentGroup(props) {
   );
 }
 
-export default MainContentGroup;
+export default Group;

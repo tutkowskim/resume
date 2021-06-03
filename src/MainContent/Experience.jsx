@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MainContentExperience(props) {
+function Experience(props) {
   const {
     company,
     roles,
@@ -38,4 +38,4 @@ function MainContentExperience(props) {
   );
 }
 
-export default MainContentExperience;
+export default Experience;
