@@ -12,8 +12,9 @@ const generatePdfFromUrl = async (url) => {
   return pdf
 }
 
-const sourceHtmlUrl = 'file://' + path.join(__dirname, 'build', 'resume.html')
-const pdf = path.join(__dirname, 'build', 'mark_tutkowski.pdf')
+const buildDir = path.join(__dirname, '..', 'build')
+const sourceHtmlUrl = 'file://' + path.join(buildDir, 'resume.html')
+const pdf = path.join(buildDir, 'mark_tutkowski.pdf')
 
 console.log(`Generating PDF from ${sourceHtmlUrl} to ${pdf}`)
 generatePdfFromUrl(sourceHtmlUrl).then(buffer => fs.writeFileSync(pdf, buffer))
