@@ -1,0 +1,44 @@
+body {
+  background-color: #7d7c79;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  
+  width: fit-content;
+  height: fit-content;
+
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+    
+  margin: auto;
+}
+
+.resume {
+  background-color: white;
+  width: 8.5in;
+  height: 11in;
+  margin: 10px;
+}
+
+.download {
+  text-align: center;
+}
+
+@media only screen and (max-height: 11in) {
+  .container {
+    margin: 0;
+    left: calc(50vw - 4.25in - 5px);
+  }
+}
+
+@media only screen and (max-height: 11in) and (max-width: 8.5in) {
+  .container {
+    margin: 0;
+    left: 0;
+  }
+}
