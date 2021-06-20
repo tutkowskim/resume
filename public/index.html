@@ -10,11 +10,13 @@
       body {
         background-color: #7d7c79;
       }
-      .app {
-        width: 8.5in;
-        height: 11in;
-        background-color: white;
+      .container {
+        display: flex;
+        flex-direction: column;
         
+        width: fit-content;
+        height: fit-content;
+
         position: absolute;
         top:0;
         bottom: 0;
@@ -23,10 +25,26 @@
           
         margin: auto;
       }
+      .resume {
+        background-color: white;
+        width: 8.5in;
+        height: 11in;
+      }
+      .download {
+        margin: 10px;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="app" id="root"></div>
+    <div class="container">
+      <div class="resume">
+        <iframe src="resume.html" width="100%" height="100%" frameBorder="0"></iframe>
+      </div>
+      <div class="download">
+        <a href="mark_tutkowski.pdf" download>Download PDF</a>
+      </div>
+    </div>
   </body>
 </html>

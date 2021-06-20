@@ -6,13 +6,13 @@ const generatePdfFromUrl = async (url) => {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   await page.goto(url, {waitUntil: 'networkidle0'});
-  const pdf = await page.pdf({ format: 'A4', printBackground: true });
+  const pdf = await page.pdf({ format: 'Letter', printBackground: true });
  
   await browser.close();
   return pdf
 }
 
-const sourceHtmlUrl = 'file://' + path.join(__dirname, 'build', 'index.html')
+const sourceHtmlUrl = 'file://' + path.join(__dirname, 'build', 'resume.html')
 const pdf = path.join(__dirname, 'build', 'mark_tutkowski.pdf')
 
 console.log(`Generating PDF from ${sourceHtmlUrl} to ${pdf}`)
