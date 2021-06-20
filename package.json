@@ -78,7 +78,7 @@
     "start": "node scripts/start.js",
     "build-react": "node scripts/build.js",
     "build-pdf": "node scripts/create-pdf.js",
-    "build": "npm run build-react && npm run build-pdf",
+    "build": "npm run build-react && npm run build-pdf && ls -la build",
     "test": "node scripts/test.js",
     "lint": "eslint src/**/*.js src/**/*.jsx"
   },
