@@ -19,6 +19,8 @@ body {
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  min-width: 8.5in;
+  min-height: 11in;
 }
 
 .resume {
@@ -44,4 +46,16 @@ body {
   border-radius: 50%;
   display: inline-block;
   text-align: center;
+}
+
+@media only screen and (max-height: 11in) {
+  .app-container {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 8.5in) {
+  .resume-container {
+    display: block;
+  }
 }
