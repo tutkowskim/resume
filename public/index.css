@@ -22,6 +22,7 @@ body {
 }
 
 .resume {
+  min-width: 8.5in;
   width: 8.5in;
   height: 11in;
   background-color: white;
