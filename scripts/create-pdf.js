@@ -15,9 +15,15 @@ const generatePdfFromUrl = async (url) => {
   return pdf;
 }
 
+const pdfName = 'mark_tutkowski.pdf'
 const buildDir = path.join(__dirname, '..', 'build');
 const sourceHtmlUrl = 'file://' + path.join(buildDir, 'resume.html');
-const pdf = path.join(buildDir, 'mark_tutkowski.pdf');
+const buildDirPdf = path.join(buildDir, pdfName);
+const devDirPdf = path.join(__dirname, '..', 'public', pdfName)
 
-console.log(`Generating PDF from ${sourceHtmlUrl} to ${pdf}`);
-generatePdfFromUrl(sourceHtmlUrl).then(buffer => fs.writeFileSync(pdf, buffer));
+console.log(`Generating PDF from ${sourceHtmlUrl} to ${buildDirPdf} and ${devDirPdf}`);
+generatePdfFromUrl(sourceHtmlUrl)
+  .then(buffer => {
+    fs.writeFileSync(buildDirPdf, buffer);
+    fs.writeFileSync(devDirPdf, buffer);
+  });
