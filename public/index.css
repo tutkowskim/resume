@@ -2,43 +2,41 @@ body {
   background-color: #7d7c79;
 }
 
-.container {
+.app-container {
   display: flex;
   flex-direction: column;
-  
-  width: fit-content;
-  height: fit-content;
+  height: 100vh;
+  width: 100vw;
+}
 
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-    
-  margin: auto;
+.resume-container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  overflow: auto;
 }
 
 .resume {
-  background-color: white;
+  margin: auto;
   width: 8.5in;
   height: 11in;
-  margin: 10px;
+  background-color: white;
 }
 
-.download {
+.download-button-container {
+  position: absolute;
+
+  bottom: 5px;
+  right: 20px;
+}
+
+.download-button {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  background-color: #3963fa;
+  color: white;
+  border-radius: 50%;
+  display: inline-block;
   text-align: center;
-}
-
-@media only screen and (max-height: 11in) {
-  .container {
-    margin: 0;
-    left: calc(50vw - 4.25in - 5px);
-  }
-}
-
-@media only screen and (max-height: 11in) and (max-width: 8.5in) {
-  .container {
-    margin: 0;
-    left: 0;
-  }
 }
