@@ -9,12 +9,21 @@
     <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
     <link rel="icon" href="https://www.tutkowski.com/favicon" />
     <link rel="stylesheet" href="index.css"> 
+    <!-- Redirect mobile users to the pdf -->
     <script type="text/javascript">
       if (screen.width <= 699) {
-        // If on mobile simply redirect the user to the pdf
         document.location = "/mark_tutkowski.pdf";
       }
-      </script>
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLR13ELTRG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SLR13ELTRG');
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
