@@ -28,13 +28,16 @@ const useStyles = makeStyles(() => ({
   },
   timelineContent: {
     flex: 'auto',
-    padding: '3px 16px',
+    padding: '0rem 0rem 0rem 1rem',
   },
   roleLine: {
     display: 'flex',
   },
   role: {
     flexGrow: '1',
+  },
+  responsibilities: {
+    paddingInlineStart: '1.25rem',
   },
 }));
 
@@ -57,9 +60,9 @@ function Experience() {
                   <div>
                     <div className={classes.roleLine}>
                       <Typography variant="body1" className={classes.role}>{role.title}</Typography>
-                      <Typography variant="body1">{`${role.startDate} - ${role.endDate}`}</Typography>
+                      <Typography variant="body2">{`${role.startDate} - ${role.endDate}`}</Typography>
                     </div>
-                    <ul>
+                    <ul className={classes.responsibilities}>
                       {role.roleDetails.map((detail) => (
                         <Typography variant="body2"><li>{detail}</li></Typography>
                       ))}
