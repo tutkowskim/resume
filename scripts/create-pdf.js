@@ -5,7 +5,10 @@ const puppeteer = require('puppeteer');
 const generatePdfFromUrl = async (url) => {
   const browser = await puppeteer.launch({ 
     headless: true,
-    args: ['--no-sandbox'],
+    args: [
+      '--no-sandbox',
+      '--font-render-hinting=medium'
+    ],
   });
   const page = await browser.newPage();
   await page.goto(url, {waitUntil: 'networkidle0'});
