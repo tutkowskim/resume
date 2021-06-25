@@ -28,7 +28,7 @@ const useStyles = makeStyles(() => ({
   },
   timelineContent: {
     flex: 'auto',
-    padding: '0rem 0rem 0rem 1rem',
+    padding: '.19rem 0rem 0rem 1rem',
   },
   roleLine: {
     display: 'flex',
