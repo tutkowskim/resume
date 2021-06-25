@@ -1,30 +1,33 @@
 import React from 'react';
+import { makeStyles, Typography } from '@material-ui/core';
+
 import Group from './Group';
 import Experience from './Experience';
 import Education from './Education';
-import Projects from './PersonalProjects';
 
-import {
-  summary,
-  experience,
-  education,
-  projects,
-} from '../data';
+import { summary } from '../data';
+
+const useStyles = makeStyles(() => ({
+  content: {
+    display: 'flex',
+    flexDirection: 'column',
+    flexBasis: '6in',
+    overflow: 'hidden',
+  },
+}));
 
 function MainContent() {
+  const classes = useStyles();
   return (
-    <section className="main_content">
+    <section className={classes.content}>
       <Group title="Summary">
-        {summary}
+        <Typography variant="body1">{summary}</Typography>
       </Group>
       <Group title="Experience">
-        {experience.map((exp) => <Experience key={exp.company} {...exp} />)}
+        <Experience />
       </Group>
       <Group title="Eduction">
-        {education.map((ed) => <Education key={ed.institution} {...ed} />)}
-      </Group>
-      <Group title="Personal Projects">
-        <Projects projects={projects} />
+        <Education />
       </Group>
     </section>
   );

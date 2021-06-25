@@ -1,16 +1,34 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+import { makeStyles } from '@material-ui/core';
+
+import {
+  Phone,
+  LinkedIn,
+  Web,
+  MailOutline,
+} from '@material-ui/icons';
+
 import SideBarGroup from './SideBarGroup';
 
-function ContactInformation(props) {
-  const {
-    phoneNumber,
-    email,
-    website,
-    linkedIn,
-  } = props;
+const useStyles = makeStyles(() => ({
+  link: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  icon: {
+    height: '16px',
+    paddingRight: '0.5rem;',
+  },
+}));
+
+function ContactInformation({
+  phoneNumber,
+  email,
+  website,
+  linkedIn,
+}) {
+  const classes = useStyles();
 
   const linkedinUrl = new URL(linkedIn);
   const linkedinDisplayValue = linkedinUrl.hostname + linkedinUrl.pathname;
@@ -19,26 +37,21 @@ function ContactInformation(props) {
   const personalWebsiteDisplayValue = personalWebsiteUrl.hostname;
 
   const items = [
-    <a href={`tel:${phoneNumber}`}>
-      <FontAwesomeIcon icon={faPhone} />
-      {' '}
-      {phoneNumber}
+    <a className={classes.link} href={`tel:${phoneNumber}`}>
+      <Phone className={classes.icon} />
+      <span>{phoneNumber}</span>
     </a>,
-    <a target="_blank" href={website} rel="noreferrer">
-      <FontAwesomeIcon icon={faGlobe} />
-      <i className="fa fa-globe" />
-      {' '}
-      {personalWebsiteDisplayValue}
+    <a className={classes.link} target="_blank" href={website} rel="noreferrer">
+      <Web className={classes.icon} />
+      <span>{personalWebsiteDisplayValue}</span>
     </a>,
-    <a target="_blank" href={`mailto:${email}`} rel="noreferrer">
-      <FontAwesomeIcon icon={faEnvelope} />
-      {' '}
-      {email}
+    <a className={classes.link} target="_blank" href={`mailto:${email}`} rel="noreferrer">
+      <MailOutline className={classes.icon} />
+      <span>{email}</span>
     </a>,
-    <a target="_blank" href={linkedIn} rel="noreferrer">
-      <FontAwesomeIcon icon={faLinkedin} />
-      {' '}
-      {linkedinDisplayValue}
+    <a className={classes.link} target="_blank" href={linkedIn} rel="noreferrer">
+      <LinkedIn className={classes.icon} />
+      <span>{linkedinDisplayValue}</span>
     </a>,
   ];
   return <SideBarGroup title="Contact Information" items={items} />;

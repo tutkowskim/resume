@@ -17,15 +17,3 @@ export const developmentTools = [
   'Gradle',
   'NPM',
 ];
-
-export const hardSkills = [
-  'Coding',
-  'Debugging',
-  'Feature Breakdown',
-];
-
-export const softSkills = [
-  'Collaboration',
-  'Critical Thinking',
-  'Mentoring',
-];

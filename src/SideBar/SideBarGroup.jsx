@@ -1,12 +1,29 @@
 import React from 'react';
+import { Typography, makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles(() => ({
+  group: {
+    '& p': {
+      padding: '0.635rem',
+    },
+  },
+  header: {
+    background: '#191a1c',
+  },
+}));
 
 function SideBarGroup(props) {
   const { title, items } = props;
+  const classes = useStyles();
   return (
-    <>
-      <div className="side_content__header"><div className="side_content__item">{title}</div></div>
-      {items.map((item) => <div key={item} className="side_content__item">{item}</div>)}
-    </>
+    <div className={classes.group}>
+      <div className={classes.header}>
+        <Typography variant="body2">{title}</Typography>
+      </div>
+      {items.map((item) => (
+        <Typography key={item} variant="body2">{item}</Typography>
+      ))}
+    </div>
   );
 }
 

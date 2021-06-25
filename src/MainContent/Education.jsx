@@ -1,24 +1,39 @@
 import React from 'react';
+import { makeStyles, Typography } from '@material-ui/core';
+import { education } from '../data';
 
-function Education(props) {
-  const {
-    institution,
-    location,
-    startDate,
-    endDate,
-    degrees,
-  } = props;
+const useStyles = makeStyles(() => ({
+  schoolSection: {
+    display: 'flex',
+    paddingBottom: '1rem',
+  },
+  schoolSectionLeft: {
+    flexGrow: 'auto',
+  },
+  schoolSectionRight: {
+    textAlign: 'right',
+  },
+}));
+
+function Education() {
+  const classes = useStyles();
   return (
-    <div className="row">
-      <div className="row__item__grow">
-        <div className="main_content__item_title">{institution}</div>
-        {degrees.map((degree) => <div key={degree}>{degree}</div>)}
-      </div>
-      <div>
-        <div className="row__item__right_align">{location}</div>
-        <div className="row__item__right_align">{`${startDate} - ${endDate}`}</div>
-      </div>
-    </div>
+    <>
+      {education.map((data) => (
+        <div className={classes.schoolSection}>
+          <div className={classes.schoolSectionLeft}>
+            <Typography className="main_content__item_title">{data.institution}</Typography>
+            {data.degrees.map((degree) => (
+              <Typography key={degree}>{degree}</Typography>
+            ))}
+          </div>
+          <div className={classes.schoolSectionRight}>
+            <Typography>{data.location}</Typography>
+            <Typography>{`${data.startDate} - ${data.endDate}`}</Typography>
+          </div>
+        </div>
+      ))}
+    </>
   );
 }
 
