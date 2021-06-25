@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
     paddingBottom: '1rem',
   },
   schoolSectionLeft: {
-    flexGrow: 'auto',
+    flexGrow: '1',
   },
   schoolSectionRight: {
     textAlign: 'right',
