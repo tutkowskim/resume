@@ -21,6 +21,15 @@ const useStyles = makeStyles(() => ({
     margin: '0rem',
     padding: '0rem',
   },
+  timelineDot: {
+    // Puppeteer is unable to render the dot correctly when
+    // generating the PDF if it has a box shadow.
+    boxShadow: 'none',
+  },
+  timelineContent: {
+    flex: 'auto',
+    padding: '3px 16px',
+  },
   roleLine: {
     display: 'flex',
   },
@@ -41,10 +50,10 @@ function Experience() {
               <TimelineItem>
                 <TimelineOppositeContent style={{ display: 'none' }} />
                 <TimelineSeparator>
-                  <TimelineDot />
+                  <TimelineDot className={classes.timelineDot} />
                   {(index !== roles.length - 1) && <TimelineConnector />}
                 </TimelineSeparator>
-                <TimelineContent style={{ flex: 1 }}>
+                <TimelineContent className={classes.timelineContent}>
                   <div>
                     <div className={classes.roleLine}>
                       <Typography variant="body1" className={classes.role}>{role.title}</Typography>
