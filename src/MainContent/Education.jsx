@@ -22,14 +22,14 @@ function Education() {
       {education.map((data) => (
         <div className={classes.schoolSection}>
           <div className={classes.schoolSectionLeft}>
-            <Typography className="main_content__item_title">{data.institution}</Typography>
+            <Typography variant="body1" className="main_content__item_title">{data.institution}</Typography>
             {data.degrees.map((degree) => (
-              <Typography key={degree}>{degree}</Typography>
+              <Typography variant="body2" key={degree}>{degree}</Typography>
             ))}
           </div>
           <div className={classes.schoolSectionRight}>
-            <Typography>{data.location}</Typography>
-            <Typography>{`${data.startDate} - ${data.endDate}`}</Typography>
+            <Typography variant="body2">{data.location}</Typography>
+            <Typography variant="body2">{`${data.startDate} - ${data.endDate}`}</Typography>
           </div>
         </div>
       ))}
