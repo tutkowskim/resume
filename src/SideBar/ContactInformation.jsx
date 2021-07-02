@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { makeStyles } from '@material-ui/core';
+import { Typography, makeStyles } from '@material-ui/core';
 
 import {
   Phone,
@@ -36,25 +36,34 @@ function ContactInformation({
   const personalWebsiteUrl = new URL(website);
   const personalWebsiteDisplayValue = personalWebsiteUrl.hostname;
 
-  const items = [
-    <a className={classes.link} href={`tel:${phoneNumber}`}>
-      <Phone className={classes.icon} />
-      <span>{phoneNumber}</span>
-    </a>,
-    <a className={classes.link} target="_blank" href={website} rel="noreferrer">
-      <Web className={classes.icon} />
-      <span>{personalWebsiteDisplayValue}</span>
-    </a>,
-    <a className={classes.link} target="_blank" href={`mailto:${email}`} rel="noreferrer">
-      <MailOutline className={classes.icon} />
-      <span>{email}</span>
-    </a>,
-    <a className={classes.link} target="_blank" href={linkedIn} rel="noreferrer">
-      <LinkedIn className={classes.icon} />
-      <span>{linkedinDisplayValue}</span>
-    </a>,
-  ];
-  return <SideBarGroup title="Contact Information" items={items} />;
+  return (
+    <SideBarGroup title="Contact Information">
+      <Typography variant="body2">
+        <a className={classes.link} href={`tel:${phoneNumber}`}>
+          <Phone className={classes.icon} />
+          <span>{phoneNumber}</span>
+        </a>
+      </Typography>
+      <Typography variant="body2">
+        <a className={classes.link} target="_blank" href={website} rel="noreferrer">
+          <Web className={classes.icon} />
+          <span>{personalWebsiteDisplayValue}</span>
+        </a>
+      </Typography>
+      <Typography variant="body2">
+        <a className={classes.link} target="_blank" href={`mailto:${email}`} rel="noreferrer">
+          <MailOutline className={classes.icon} />
+          <span>{email}</span>
+        </a>
+      </Typography>
+      <Typography variant="body2">
+        <a className={classes.link} target="_blank" href={linkedIn} rel="noreferrer">
+          <LinkedIn className={classes.icon} />
+          <span>{linkedinDisplayValue}</span>
+        </a>
+      </Typography>
+    </SideBarGroup>
+  );
 }
 
 export default ContactInformation;

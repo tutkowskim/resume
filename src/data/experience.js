@@ -8,7 +8,7 @@ const experience = [
         endDate: 'Present',
         roleDetails: [
           'Developed UI components in React for internal applications',
-          'Developed backend services in NodeJS for internal applications',
+          'Developed backend services in Node.js for internal applications using kubernetes and aws lambda functions',
           'Performed reviews of code contributions and designs from my peers',
         ],
       },
@@ -22,7 +22,7 @@ const experience = [
         startDate: 'May 2018',
         endDate: 'April 2021',
         roleDetails: [
-          'Developed features in Angular and NodeJS for a next generation software project',
+          'Developed features in Angular, Kotlin, and Node.js for a next generation software project',
           'Developed features in Java, C#, and C++ for Studio 5000 View Designer',
           'Performed code reviews of contributions from fellow team members',
           'Investigated and resolved countless product anomalies',
@@ -45,8 +45,8 @@ const experience = [
         startDate: 'June 2015',
         endDate: 'October 2016',
         roleDetails: [
-          'Troubleshooted product anomalies/bugs',
           'Developed features in Java, C#, and C++ for Studio 5000 View Designer',
+          'Troubleshooted product anomalies/bugs',
           'Performed code reviews of contributions from fellow team members',
         ],
       },

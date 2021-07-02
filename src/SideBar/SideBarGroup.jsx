@@ -13,16 +13,14 @@ const useStyles = makeStyles(() => ({
 }));
 
 function SideBarGroup(props) {
-  const { title, items } = props;
+  const { title, children } = props;
   const classes = useStyles();
   return (
     <div className={classes.group}>
       <div className={classes.header}>
         <Typography variant="body2">{title}</Typography>
       </div>
-      {items.map((item) => (
-        <Typography key={item} variant="body2">{item}</Typography>
-      ))}
+      {children}
     </div>
   );
 }

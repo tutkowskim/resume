@@ -1,14 +1,14 @@
 import React from 'react';
 import { Typography, makeStyles } from '@material-ui/core';
-
 import SideBarGroup from './SideBarGroup';
 import ContactInformation from './ContactInformation';
+import Skill from './Skill';
 
 import {
   personalInformation,
-  languagesProficient,
-  languagesFamiliar,
+  programmingLanguages,
   developmentTools,
+  frameworks,
 } from '../data';
 
 const useStyles = makeStyles((theme) => ({
@@ -46,9 +46,21 @@ function SideBar() {
       <Typography className={classes.name} variant="h4">{personalInformation.name}</Typography>
       <Typography className={classes.title} variant="h6">{personalInformation.title}</Typography>
       <ContactInformation {...personalInformation} />
-      <SideBarGroup title="Programming Languages (Proficient)" items={languagesProficient} />
-      <SideBarGroup title="Programming Languages (Familiar)" items={languagesFamiliar} />
-      <SideBarGroup title="Development Tools" items={developmentTools} />
+      <SideBarGroup title="Frameworks">
+        {frameworks.map((item) => (
+          <Skill key={item.name} name={item.name} ranking={item.ranking} />
+        ))}
+      </SideBarGroup>
+      <SideBarGroup title="Programming Languages">
+        {programmingLanguages.map((item) => (
+          <Skill key={item} name={item.name} ranking={item.ranking} />
+        ))}
+      </SideBarGroup>
+      <SideBarGroup title="Development Tools">
+        {developmentTools.map((item) => (
+          <Skill key={item} name={item.name} ranking={item.ranking} />
+        ))}
+      </SideBarGroup>
     </section>
   );
 }
