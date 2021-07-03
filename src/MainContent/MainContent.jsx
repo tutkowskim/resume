@@ -11,7 +11,7 @@ const useStyles = makeStyles(() => ({
   content: {
     display: 'flex',
     flexDirection: 'column',
-    flexBasis: '6in',
+    flexBasis: '5.9in',
     overflow: 'hidden',
   },
 }));

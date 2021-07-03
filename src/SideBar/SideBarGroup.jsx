@@ -4,7 +4,9 @@ import { Typography, makeStyles } from '@material-ui/core';
 const useStyles = makeStyles(() => ({
   group: {
     '& p': {
-      padding: '0.635rem',
+      paddingTop: '0.625rem',
+      paddingBottom: '0.625rem',
+      paddingLeft: '1.625rem',
     },
   },
   header: {

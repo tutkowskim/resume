@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   side_content: {
     display: 'flex',
     flexDirection: 'column',
-    flexBasis: '2.5in',
+    flexBasis: '2.6in',
     overflow: 'hidden',
     background: '#2d2f33',
     color: theme.palette.primary.contrastText,
@@ -32,10 +32,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   name: {
-    padding: '0.75rem 0.75rem 0rem 0.75rem',
+    padding: '1.625rem  1.625rem 0 1.625rem',
   },
   title: {
-    padding: '0rem 0.75rem 0.75rem 0.75rem',
+    padding: '0rem 1.625rem 0.75rem 1.625rem',
   },
 }));
 
