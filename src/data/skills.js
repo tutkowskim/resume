@@ -9,6 +9,7 @@ export const programmingLanguages = [
 export const frameworks = [
   { name: 'Angular', ranking: 5 },
   { name: 'React', ranking: 5 },
+  { name: 'Qt', ranking: 3 },
   { name: 'Node.js', ranking: 5 },
   { name: 'GraphQL', ranking: 5 },
 ];

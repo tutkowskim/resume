@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import Skill from './Skill';
 
 import {
@@ -25,19 +25,16 @@ function Skills() {
   return (
     <div className={classes.skillsGroups}>
       <div className={classes.skillGroup}>
-        <Typography>Frameworks</Typography>
         {frameworks.map((item) => (
           <Skill key={item.name} name={item.name} ranking={item.ranking} />
         ))}
       </div>
       <div className={classes.skillGroup}>
-        <Typography>Programing Languages</Typography>
         {programmingLanguages.map((item) => (
           <Skill key={item} name={item.name} ranking={item.ranking} />
         ))}
       </div>
       <div className={classes.skillGroup}>
-        <Typography>Development Tools</Typography>
         {developmentTools.map((item) => (
           <Skill key={item} name={item.name} ranking={item.ranking} />
         ))}
