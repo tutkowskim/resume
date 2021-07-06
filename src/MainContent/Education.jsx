@@ -1,35 +1,46 @@
 import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
+
 import { education } from '../data';
 
 const useStyles = makeStyles(() => ({
-  schoolSection: {
+  container: {
     display: 'flex',
-    paddingBottom: '1rem',
+    marginTop: '1rem',
+    '&:first-child': {
+      marginTop: '0rem',
+    },
   },
-  schoolSectionLeft: {
+  date: {
+    width: '5.2rem',
+    paddingRight: '1rem',
+    flexGrow: '0',
+    flexShrink: '0',
+  },
+  degree: {
     flexGrow: '1',
   },
-  schoolSectionRight: {
-    textAlign: 'right',
+  responsibilities: {
+    margin: '0rem',
+    paddingLeft: '1rem',
   },
 }));
 
-function Education() {
+function Experience() {
   const classes = useStyles();
   return (
     <>
-      {education.map((data) => (
-        <div className={classes.schoolSection}>
-          <div className={classes.schoolSectionLeft}>
-            <Typography variant="body1" className="main_content__item_title">{data.institution}</Typography>
-            {data.degrees.map((degree) => (
-              <Typography variant="body2" key={degree}>{degree}</Typography>
-            ))}
-          </div>
-          <div className={classes.schoolSectionRight}>
-            <Typography variant="body2">{data.location}</Typography>
-            <Typography variant="body2">{`${data.startDate} - ${data.endDate}`}</Typography>
+      {education.map((educationInfo) => (
+        <div className={classes.container}>
+          <Typography className={classes.date} variant="caption">
+            <span>{educationInfo.startDate}</span>
+            <span>{' - '}</span>
+            <br />
+            <span>{educationInfo.endDate}</span>
+          </Typography>
+          <div className={classes.degree}>
+            <Typography variant="body1">{educationInfo.degree}</Typography>
+            <Typography variant="body2">{educationInfo.institution}</Typography>
           </div>
         </div>
       ))}
@@ -37,4 +48,4 @@ function Education() {
   );
 }
 
-export default Education;
+export default Experience;

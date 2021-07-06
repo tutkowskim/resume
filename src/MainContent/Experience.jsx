@@ -1,43 +1,28 @@
 import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
-import {
-  Timeline,
-  TimelineItem,
-  TimelineSeparator,
-  TimelineConnector,
-  TimelineContent,
-  TimelineOppositeContent,
-  TimelineDot,
-} from '@material-ui/lab';
 
 import { experience } from '../data';
 
 const useStyles = makeStyles(() => ({
-  companyName: {
-    marginBottom: '0rem',
-    paddingBottom: '0rem',
-  },
-  timeline: {
-    margin: '0rem',
-    padding: '0rem',
-  },
-  timelineDot: {
-    // Puppeteer is unable to render the dot correctly when
-    // generating the PDF if it has a box shadow.
-    boxShadow: 'none',
-  },
-  timelineContent: {
-    flex: 'auto',
-    padding: '.19rem 0rem 0rem 1rem',
-  },
-  roleLine: {
+  container: {
     display: 'flex',
+    marginTop: '1rem',
+    '&:first-child': {
+      marginTop: '0rem',
+    },
+  },
+  date: {
+    width: '5.2rem',
+    paddingRight: '1rem',
+    flexGrow: '0',
+    flexShrink: '0',
   },
   role: {
     flexGrow: '1',
   },
   responsibilities: {
-    paddingInlineStart: '1.25rem',
+    margin: '0rem',
+    paddingLeft: '1rem',
   },
 }));
 
@@ -45,33 +30,23 @@ function Experience() {
   const classes = useStyles();
   return (
     <>
-      {experience.map((companyData) => (
-        <div>
-          <Typography className={classes.companyName} variant="h6">{companyData.company}</Typography>
-          <Timeline align="left" className={classes.timeline}>
-            {companyData.roles.map(((role, index, roles) => (
-              <TimelineItem>
-                <TimelineOppositeContent style={{ display: 'none' }} />
-                <TimelineSeparator>
-                  <TimelineDot className={classes.timelineDot} />
-                  {(index !== roles.length - 1) && <TimelineConnector />}
-                </TimelineSeparator>
-                <TimelineContent className={classes.timelineContent}>
-                  <div>
-                    <div className={classes.roleLine}>
-                      <Typography variant="body1" className={classes.role}>{role.title}</Typography>
-                      <Typography variant="body2">{`${role.startDate} - ${role.endDate}`}</Typography>
-                    </div>
-                    <ul className={classes.responsibilities}>
-                      {role.roleDetails.map((detail) => (
-                        <Typography variant="body2"><li>{detail}</li></Typography>
-                      ))}
-                    </ul>
-                  </div>
-                </TimelineContent>
-              </TimelineItem>
-            )))}
-          </Timeline>
+      {experience.map((role) => (
+        <div className={classes.container}>
+          <Typography className={classes.date} variant="caption">
+            <span>{role.startDate}</span>
+            <span>{' - '}</span>
+            <br />
+            <span>{role.endDate}</span>
+          </Typography>
+          <div className={classes.role}>
+            <Typography variant="body1">{role.title}</Typography>
+            <Typography variant="body2">{role.company}</Typography>
+            <ul className={classes.responsibilities}>
+              {role.roleDetails.map((detail) => (
+                <li>{detail}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       ))}
     </>

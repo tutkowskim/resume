@@ -1,22 +1,15 @@
 const eduction = [
   {
+    degree: 'Bachelor of Science in Computer Engineering',
     institution: 'Milwaukee School of Engineering',
-    location: 'Milwaukee, WI USA',
-    startDate: 'May 2018',
-    endDate: 'April 2021',
-    degrees: [
-      'Bachelor of Science in Computer Engineering',
-      'Minor in Mathematics',
-    ],
+    startDate: 'Sept 2011',
+    endDate: 'May 2015',
   },
   {
-    institution: 'Czech Technical University in Prague',
-    location: 'Prague, Czech Republic',
-    startDate: 'February 2013',
-    endDate: 'June 2013',
-    degrees: [
-      'Foreign Exchange',
-    ],
+    degree: 'Google UX Design Professional Certificate',
+    institution: 'Google - Coursera',
+    startDate: 'June 2021',
+    endDate: 'Present',
   },
 ];
 

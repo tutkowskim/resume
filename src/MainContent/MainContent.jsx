@@ -23,7 +23,7 @@ function MainContent() {
   return (
     <section className={classes.content}>
       <Group title="Summary">
-        <Typography variant="body1">{summary}</Typography>
+        <Typography variant="body2">{summary}</Typography>
       </Group>
       <Divider />
       <Group title="Experience">
