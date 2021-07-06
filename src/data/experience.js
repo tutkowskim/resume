@@ -13,7 +13,7 @@ const experience = [
   {
     title: 'Software Engineer',
     company: 'Rockwell Automation',
-    startDate: 'May 2018',
+    startDate: 'June 2012',
     endDate: 'April 2021',
     roleDetails: [
       'Developed features in Angular, Kotlin, and Node.js for a next generation software project',
