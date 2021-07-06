@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   group: {
     '& p': {
       paddingTop: '0.625rem',
@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   header: {
-    background: '#191a1c',
+    background: theme.palette.secondary.dark,
   },
 }));
 

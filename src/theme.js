@@ -11,8 +11,6 @@ const theme = createMuiTheme({
     secondary: {
       light: '#5b5d63',
       main: '#5b5d63',
-      // dark: will be calculated from palette.secondary.main,
-      contrastText: '#191a1c',
     },
     // Used by `getContrastText()` to maximize the contrast between
     // the background and the text.

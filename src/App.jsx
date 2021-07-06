@@ -2,6 +2,7 @@ import React from 'react';
 import { CssBaseline, makeStyles, ThemeProvider } from '@material-ui/core';
 
 import theme from './theme';
+import Header from './Header';
 import MainContent from './MainContent';
 import SideBar from './SideBar';
 
@@ -11,6 +12,12 @@ const useStyles = makeStyles(() => ({
     height: '11in',
     overflow: 'hidden',
     display: 'flex',
+    flexDirection: 'column',
+  },
+  content: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexGrow: '1',
   },
 }));
 
@@ -19,10 +26,13 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <article className={classes.resume}>
-        <SideBar />
-        <MainContent />
-      </article>
+      <nav className={classes.resume}>
+        <Header />
+        <article className={classes.content}>
+          <SideBar />
+          <MainContent />
+        </article>
+      </nav>
     </ThemeProvider>
   );
 }

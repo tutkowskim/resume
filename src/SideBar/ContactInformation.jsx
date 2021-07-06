@@ -1,7 +1,5 @@
 import React from 'react';
-
-import { Typography, makeStyles } from '@material-ui/core';
-
+import { Typography, Link, makeStyles } from '@material-ui/core';
 import {
   Phone,
   LinkedIn,
@@ -39,28 +37,28 @@ function ContactInformation({
   return (
     <SideBarGroup title="Contact Information">
       <Typography variant="body2">
-        <a className={classes.link} href={`tel:${phoneNumber}`}>
+        <Link className={classes.link} href={`tel:${phoneNumber}`} color="inherit" variant="body2">
           <Phone className={classes.icon} />
           <span>{phoneNumber}</span>
-        </a>
+        </Link>
       </Typography>
       <Typography variant="body2">
-        <a className={classes.link} target="_blank" href={website} rel="noreferrer">
+        <Link className={classes.link} target="_blank" href={website} rel="noreferrer" color="inherit" variant="body2">
           <Web className={classes.icon} />
           <span>{personalWebsiteDisplayValue}</span>
-        </a>
+        </Link>
       </Typography>
       <Typography variant="body2">
-        <a className={classes.link} target="_blank" href={`mailto:${email}`} rel="noreferrer">
+        <Link className={classes.link} target="_blank" href={`mailto:${email}`} rel="noreferrer" color="inherit" variant="body2">
           <MailOutline className={classes.icon} />
           <span>{email}</span>
-        </a>
+        </Link>
       </Typography>
       <Typography variant="body2">
-        <a className={classes.link} target="_blank" href={linkedIn} rel="noreferrer">
+        <Link className={classes.link} target="_blank" href={linkedIn} rel="noreferrer" color="inherit" variant="body2">
           <LinkedIn className={classes.icon} />
           <span>{linkedinDisplayValue}</span>
-        </a>
+        </Link>
       </Typography>
     </SideBarGroup>
   );
