@@ -4,7 +4,6 @@ import { CssBaseline, makeStyles, ThemeProvider } from '@material-ui/core';
 import theme from './theme';
 import Header from './Header';
 import MainContent from './MainContent';
-import SideBar from './SideBar';
 
 const useStyles = makeStyles(() => ({
   resume: {
@@ -14,11 +13,6 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
   },
-  content: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexGrow: '1',
-  },
 }));
 
 function App() {
@@ -26,13 +20,10 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <nav className={classes.resume}>
+      <article className={classes.resume}>
         <Header />
-        <article className={classes.content}>
-          <SideBar />
-          <MainContent />
-        </article>
-      </nav>
+        <MainContent />
+      </article>
     </ThemeProvider>
   );
 }

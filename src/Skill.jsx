@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
   },
   name: {
-    flexGrow: '1',
+    width: '5rem',
   },
   ranking: {
     display: 'flex',

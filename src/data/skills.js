@@ -1,5 +1,4 @@
 export const programmingLanguages = [
-  { name: 'C#', ranking: 4 },
   { name: 'C++', ranking: 3 },
   { name: 'Java', ranking: 5 },
   { name: 'Typescript', ranking: 5 },
