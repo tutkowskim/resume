@@ -64,7 +64,6 @@ function Header() {
             <span>{personalWebsiteDisplayValue}</span>
           </Link>
         </span>
-
       </div>
     </Container>
   );
