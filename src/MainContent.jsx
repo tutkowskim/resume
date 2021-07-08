@@ -1,12 +1,10 @@
 import React from 'react';
-import { makeStyles, Divider, Typography } from '@material-ui/core';
+import { makeStyles, Divider } from '@material-ui/core';
 
-import Group from './Group';
-import Experience from './Experience';
 import Education from './Education';
-
-import { summary } from './data';
+import Experience from './Experience';
 import Skills from './Skills';
+import Summary from './Summary';
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -15,6 +13,7 @@ const useStyles = makeStyles(() => ({
     marginLeft: '2rem',
     marginRight: '2rem',
     overflow: 'hidden',
+    gap: '0.25rem',
   },
 }));
 
@@ -22,21 +21,13 @@ function MainContent() {
   const classes = useStyles();
   return (
     <section className={classes.content}>
-      <Group title="Summary">
-        <Typography variant="body2">{summary}</Typography>
-      </Group>
+      <Summary />
       <Divider />
-      <Group title="Skills">
-        <Skills />
-      </Group>
+      <Skills />
       <Divider />
-      <Group title="Experience">
-        <Experience />
-      </Group>
+      <Experience />
       <Divider />
-      <Group title="Eduction">
-        <Education />
-      </Group>
+      <Education />
     </section>
   );
 }

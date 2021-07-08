@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
+import Group from './Group';
 import Skill from './Skill';
 
 import {
@@ -23,23 +24,25 @@ const useStyles = makeStyles(() => ({
 function Skills() {
   const classes = useStyles();
   return (
-    <div className={classes.skillsGroups}>
-      <div className={classes.skillGroup}>
-        {frameworks.map((item) => (
-          <Skill key={item.name} name={item.name} ranking={item.ranking} />
-        ))}
+    <Group title="Skills">
+      <div className={classes.skillsGroups}>
+        <div className={classes.skillGroup}>
+          {frameworks.map((item) => (
+            <Skill key={item.name} name={item.name} ranking={item.ranking} />
+          ))}
+        </div>
+        <div className={classes.skillGroup}>
+          {programmingLanguages.map((item) => (
+            <Skill key={item} name={item.name} ranking={item.ranking} />
+          ))}
+        </div>
+        <div className={classes.skillGroup}>
+          {developmentTools.map((item) => (
+            <Skill key={item} name={item.name} ranking={item.ranking} />
+          ))}
+        </div>
       </div>
-      <div className={classes.skillGroup}>
-        {programmingLanguages.map((item) => (
-          <Skill key={item} name={item.name} ranking={item.ranking} />
-        ))}
-      </div>
-      <div className={classes.skillGroup}>
-        {developmentTools.map((item) => (
-          <Skill key={item} name={item.name} ranking={item.ranking} />
-        ))}
-      </div>
-    </div>
+    </Group>
   );
 }
 

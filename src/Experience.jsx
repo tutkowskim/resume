@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
-
+import Group from './Group';
 import { experience } from './data';
 
 const useStyles = makeStyles(() => ({
@@ -29,7 +29,7 @@ const useStyles = makeStyles(() => ({
 function Experience() {
   const classes = useStyles();
   return (
-    <>
+    <Group title="Experience">
       {experience.map((role) => (
         <div className={classes.container}>
           <Typography className={classes.date} variant="caption">
@@ -49,7 +49,7 @@ function Experience() {
           </div>
         </div>
       ))}
-    </>
+    </Group>
   );
 }
 
