@@ -46,24 +46,24 @@ function Header() {
       <Typography variant="h4">{personalInformation.name}</Typography>
       <Typography variant="h6">{personalInformation.title}</Typography>
       <div className={classes.contactInformation}>
-        <span variant="subtitle2">
+        <Typography variant="subtitle2">
           <Link className={classes.link} href={`tel:${personalInformation.phoneNumber}`} color="inherit" variant="body2">
             <Phone className={classes.icon} />
             <span>{personalInformation.phoneNumber}</span>
           </Link>
-        </span>
-        <span variant="subtitle2">
+        </Typography>
+        <Typography variant="subtitle2">
           <Link className={classes.link} target="_blank" href={`mailto:${personalInformation.email}`} rel="noreferrer" color="inherit" variant="body2">
             <MailOutline className={classes.icon} />
             <span>{personalInformation.email}</span>
           </Link>
-        </span>
-        <span variant="captisubtitle2on">
+        </Typography>
+        <Typography variant="subtitle2">
           <Link className={classes.link} target="_blank" href={personalInformation.website} rel="noreferrer" color="inherit" variant="body2">
             <Web className={classes.icon} />
             <span>{personalWebsiteDisplayValue}</span>
           </Link>
-        </span>
+        </Typography>
       </div>
     </Container>
   );
