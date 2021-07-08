@@ -33,12 +33,12 @@ function Skills() {
         </div>
         <div className={classes.skillGroup}>
           {programmingLanguages.map((item) => (
-            <Skill key={item} name={item.name} ranking={item.ranking} />
+            <Skill key={item.name} name={item.name} ranking={item.ranking} />
           ))}
         </div>
         <div className={classes.skillGroup}>
           {developmentTools.map((item) => (
-            <Skill key={item} name={item.name} ranking={item.ranking} />
+            <Skill key={item.name} name={item.name} ranking={item.ranking} />
           ))}
         </div>
       </div>

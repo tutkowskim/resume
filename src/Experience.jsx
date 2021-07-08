@@ -31,7 +31,7 @@ function Experience() {
   return (
     <Group title="Experience">
       {experience.map((role) => (
-        <div className={classes.container}>
+        <div className={classes.container} key={role.startDate}>
           <Typography className={classes.date} variant="caption">
             <span>{role.startDate}</span>
             <span>{' - '}</span>
@@ -43,7 +43,7 @@ function Experience() {
             <Typography variant="body2">{role.company}</Typography>
             <ul className={classes.responsibilities}>
               {role.roleDetails.map((detail) => (
-                <li>{detail}</li>
+                <li key={detail}>{detail}</li>
               ))}
             </ul>
           </div>

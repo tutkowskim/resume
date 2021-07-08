@@ -31,7 +31,7 @@ function Experience() {
   return (
     <Group title="Eduction">
       {education.map((educationInfo) => (
-        <div className={classes.container}>
+        <div className={classes.container} key={educationInfo.degree}>
           <Typography className={classes.date} variant="caption">
             <span>{educationInfo.startDate}</span>
             <span>{' - '}</span>
