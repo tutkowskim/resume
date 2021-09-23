@@ -42,8 +42,9 @@ const useStyles = makeStyles((theme) => ({
 
 function Header() {
   const classes = useStyles();
-  const personalWebsiteUrl = new URL(personalInformation.website);
-  const personalWebsiteDisplayValue = personalWebsiteUrl.hostname;
+  const personalWebsiteDisplayValue = (new URL(personalInformation.website)).hostname;
+  const linkedInURL = new URL(personalInformation.linkedIn);
+  const linkedInDisplayValue = linkedInURL.hostname + linkedInURL.pathname;
   return (
     <Container className={classes.header}>
       <div className={classes.nameInformation}>
@@ -72,7 +73,7 @@ function Header() {
         <Typography variant="subtitle2">
           <Link className={classes.link} target="_blank" href={personalInformation.linkedIn} rel="noreferrer" color="inherit" variant="body2">
             <LinkedIn className={classes.icon} />
-            <span>{personalInformation.linkedIn}</span>
+            <span>{linkedInDisplayValue}</span>
           </Link>
         </Typography>
       </div>
