@@ -5,7 +5,6 @@ import Education from './Education';
 import Experience from './Experience';
 import Skills from './Skills';
 import Summary from './Summary';
-import Certifications from './Certifications';
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -24,13 +23,11 @@ function MainContent() {
     <section className={classes.content}>
       <Summary />
       <Divider />
-      <Skills />
-      <Divider />
       <Experience />
       <Divider />
       <Education />
       <Divider />
-      <Certifications />
+      <Skills />
     </section>
   );
 }

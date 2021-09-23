@@ -9,6 +9,7 @@ import {
   Phone,
   Web,
   MailOutline,
+  LinkedIn,
 } from '@material-ui/icons';
 
 import { personalInformation } from './data';
@@ -16,16 +17,18 @@ import { personalInformation } from './data';
 const useStyles = makeStyles((theme) => ({
   header: {
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: 'row',
     background: theme.palette.primary.main,
     color: theme.palette.primary.contrastText,
-    padding: '1.625rem',
+    paddingTop: '1.625rem;',
+    paddingBottom: '1.625rem;',
+    paddingLeft: '2rem',
+    paddingRight: '2rem',
+  },
+  nameInformation: {
+    flexGrow: '1',
   },
   contactInformation: {
-    display: 'flex',
-    gap: '0.5rem',
   },
   link: {
     display: 'flex',
@@ -43,8 +46,10 @@ function Header() {
   const personalWebsiteDisplayValue = personalWebsiteUrl.hostname;
   return (
     <Container className={classes.header}>
-      <Typography variant="h4">{personalInformation.name}</Typography>
-      <Typography variant="h6">{personalInformation.title}</Typography>
+      <div className={classes.nameInformation}>
+        <Typography variant="h4">{personalInformation.name}</Typography>
+        <Typography variant="h6">{personalInformation.title}</Typography>
+      </div>
       <div className={classes.contactInformation}>
         <Typography variant="subtitle2">
           <Link className={classes.link} href={`tel:${personalInformation.phoneNumber}`} color="inherit" variant="body2">
@@ -62,6 +67,12 @@ function Header() {
           <Link className={classes.link} target="_blank" href={personalInformation.website} rel="noreferrer" color="inherit" variant="body2">
             <Web className={classes.icon} />
             <span>{personalWebsiteDisplayValue}</span>
+          </Link>
+        </Typography>
+        <Typography variant="subtitle2">
+          <Link className={classes.link} target="_blank" href={personalInformation.linkedIn} rel="noreferrer" color="inherit" variant="body2">
+            <LinkedIn className={classes.icon} />
+            <span>{personalInformation.linkedIn}</span>
           </Link>
         </Typography>
       </div>
