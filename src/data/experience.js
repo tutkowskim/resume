@@ -16,7 +16,7 @@ const experience = [
     startDate: 'May 2018',
     endDate: 'April 2021',
     roleDetails: [
-      'Serve as a team leader for an engineering team of 4 developers and 2 test engineers',
+      'Served as a team leader for an engineering team of 4 developers and 2 test engineers',
       'Developed features in Angular, Kotlin, Typescript, and Node.js for a next generation software project',
       'Developed features in Java, C#, and C++ for Studio 5000 View Designer',
       'Mentored new engineers and student associates',
