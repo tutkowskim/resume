@@ -47,13 +47,13 @@ function ContactInformation() {
         </Link>
       </Typography>
       <Typography variant="subtitle2">
-        <Link className={classes.link} target="_blank" href={personalInformation.linkedIn.display} rel="noreferrer" color="inherit" variant="body2">
+        <Link className={classes.link} target="_blank" href={personalInformation.linkedIn.url} rel="noreferrer" color="inherit" variant="body2">
           <LinkedIn className={classes.icon} />
           <span>{personalInformation.linkedIn.display}</span>
         </Link>
       </Typography>
       <Typography variant="subtitle2">
-        <Link className={classes.link} target="_blank" href={personalInformation.github.display} rel="noreferrer" color="inherit" variant="body2">
+        <Link className={classes.link} target="_blank" href={personalInformation.github.url} rel="noreferrer" color="inherit" variant="body2">
           <GitHub className={classes.icon} />
           <span>{personalInformation.github.display}</span>
         </Link>
