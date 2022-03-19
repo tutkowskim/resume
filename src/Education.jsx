@@ -1,22 +1,34 @@
 import React from 'react';
-import CredentialGroup from './CredentialGroup';
+import { makeStyles, Typography } from '@material-ui/core';
+import Group from './Group';
 import { education } from './data';
 
+const useStyles = makeStyles(() => ({
+  education: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '0.75rem',
+  },
+}));
+
 function Eduction() {
-  const credentials = education.map((educationInfo) => ({
-    name: educationInfo.degree,
-    from: educationInfo.institution,
-    date: (
-      <>
-        <span>{educationInfo.startDate}</span>
-        <span>{' - '}</span>
-        <br />
-        <span>{educationInfo.endDate}</span>
-      </>
-    ),
-  }));
+  const classes = useStyles();
   return (
-    <CredentialGroup name="Eduction" credentials={credentials} />
+    <Group title="Education">
+      <div className={classes.education}>
+        {education.map((educationInfo) => (
+          <div>
+            <Typography variant="subtitle2">{educationInfo.degree}</Typography>
+            <Typography variant="subtitle2">
+              <span>{educationInfo.startDate}</span>
+              <span>{' - '}</span>
+              <span>{educationInfo.endDate}</span>
+            </Typography>
+            <Typography variant="subtitle2">{educationInfo.institution}</Typography>
+          </div>
+        ))}
+      </div>
+    </Group>
   );
 }
 

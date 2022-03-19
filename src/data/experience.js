@@ -1,9 +1,18 @@
 const experience = [
   {
+    title: 'Senior Software Engineer',
+    company: 'Rockwell Automation',
+    startDate: 'Feb 2022',
+    endDate: 'Present',
+    roleDetails: [
+      'Test',
+    ],
+  },
+  {
     title: 'Software Engineer',
     company: 'Northwestern Mutual',
     startDate: 'April 2021',
-    endDate: 'Present',
+    endDate: 'Feb 2022',
     roleDetails: [
       'Developed UI components in React for internal applications',
       'Developed backend services in Node.js for internal applications using kubernetes and aws lambda functions',

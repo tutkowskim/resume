@@ -1,15 +1,14 @@
 import React from 'react';
 import { makeStyles, Divider } from '@material-ui/core';
 
-import Education from './Education';
 import Experience from './Experience';
-import Skills from './Skills';
 import Summary from './Summary';
 
 const useStyles = makeStyles(() => ({
   content: {
     display: 'flex',
     flexDirection: 'column',
+    flex: '1 1 auto',
     marginLeft: '2rem',
     marginRight: '2rem',
     overflow: 'hidden',
@@ -24,10 +23,6 @@ function MainContent() {
       <Summary />
       <Divider />
       <Experience />
-      <Divider />
-      <Education />
-      <Divider />
-      <Skills />
     </section>
   );
 }

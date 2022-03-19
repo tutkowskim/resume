@@ -4,6 +4,7 @@ import { CssBaseline, makeStyles, ThemeProvider } from '@material-ui/core';
 import theme from './theme';
 import Header from './Header';
 import MainContent from './MainContent';
+import SideBar from './SideBar';
 
 const useStyles = makeStyles(() => ({
   resume: {
@@ -12,6 +13,11 @@ const useStyles = makeStyles(() => ({
     overflow: 'hidden',
     display: 'flex',
     flexDirection: 'column',
+  },
+  resumeContent: {
+    display: 'flex',
+    flexDirection: 'row',
+    flex: '1 1 100%',
   },
 }));
 
@@ -22,7 +28,10 @@ function App() {
       <CssBaseline />
       <article className={classes.resume}>
         <Header />
-        <MainContent />
+        <div className={classes.resumeContent}>
+          <SideBar />
+          <MainContent />
+        </div>
       </article>
     </ThemeProvider>
   );

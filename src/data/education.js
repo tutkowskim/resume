@@ -1,13 +1,13 @@
 const eduction = [
   {
-    degree: 'Master of Computer Science',
-    institution: 'University of Illinois at Urbana-Champaign',
+    degree: 'Computer Science, MS',
+    institution: 'UIUC',
     startDate: 'Aug 2021',
     endDate: 'Present',
   },
   {
-    degree: 'Bachelor of Science in Computer Engineering',
-    institution: 'Milwaukee School of Engineering',
+    degree: 'Computer Engineering, BS',
+    institution: 'MSOE',
     startDate: 'Sept 2011',
     endDate: 'May 2015',
   },
