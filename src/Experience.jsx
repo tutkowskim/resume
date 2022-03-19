@@ -10,7 +10,6 @@ function Experience() {
       <>
         <span>{exp.startDate}</span>
         <span>{' - '}</span>
-        <br />
         <span>{exp.endDate}</span>
       </>
     ),

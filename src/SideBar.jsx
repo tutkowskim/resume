@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
   contactInformation: {
     background: theme.palette.secondary.main,
     color: theme.palette.secondary.contrastText,
-    flex: '0 0 2.3in',
+    flex: '0 0 auto',
   },
   content: {
     display: 'flex',
