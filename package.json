@@ -17,6 +17,7 @@
     "start": "react-scripts start",
     "build-react": "react-scripts build",
     "build-pdf": "node create-pdf.js",
+    "build": "npm run build-react && npm run build-pdf",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
