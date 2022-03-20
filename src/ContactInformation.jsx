@@ -1,5 +1,7 @@
 import React from 'react';
-import { makeStyles, Typography, Link } from '@material-ui/core';
+import { Typography, Link } from '@mui/material';
+
+import makeStyles from '@mui/styles/makeStyles';
 
 import {
   Phone,
@@ -7,7 +9,7 @@ import {
   MailOutline,
   LinkedIn,
   GitHub,
-} from '@material-ui/icons';
+} from '@mui/icons-material';
 
 import Group from './Group';
 import { personalInformation } from './data';

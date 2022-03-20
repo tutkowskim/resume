@@ -1,5 +1,7 @@
 import React from 'react';
-import { makeStyles, Divider } from '@material-ui/core';
+import { Divider } from '@mui/material';
+
+import makeStyles from '@mui/styles/makeStyles';
 
 import Experience from './Experience';
 import Summary from './Summary';
