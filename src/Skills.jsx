@@ -1,4 +1,5 @@
 import React from 'react';
+import { Typography } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 import Group from './Group';
 import { skills } from './data';
@@ -16,7 +17,7 @@ function Skills() {
     <Group title="Skills">
       <ul className={classes.skills}>
         {skills.map((item) => (
-          <li key={item}>{item}</li>
+          <li key={item}><Typography variant="body2">{item}</Typography></li>
         ))}
       </ul>
     </Group>

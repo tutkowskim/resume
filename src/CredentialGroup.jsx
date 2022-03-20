@@ -48,7 +48,7 @@ function CredentialGroup({ name, credentials }) {
             {credential.details && credential.details.length > 0 && (
               <ul className={classes.details}>
                 {credential.details.map((detail) => (
-                  <li key={detail}>{detail}</li>
+                  <li key={detail}><Typography variant="body2">{detail}</Typography></li>
                 ))}
               </ul>
             )}
