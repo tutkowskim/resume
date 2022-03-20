@@ -1,38 +1,68 @@
 import React from 'react';
-import { CssBaseline, makeStyles, ThemeProvider } from '@material-ui/core';
+import { CssBaseline, makeStyles, ThemeProvider, IconButton } from '@material-ui/core';
+import {
+  ArrowDownward
+} from '@material-ui/icons';
 
 import theme from './theme';
-import Header from './Header';
-import MainContent from './MainContent';
-import SideBar from './SideBar';
+import Resume from './Resume';
 
 const useStyles = makeStyles(() => ({
-  resume: {
-    width: '8.5in',
-    height: '11in',
-    overflow: 'hidden',
+  appContaineVerticalCenter: {
     display: 'flex',
+    height: '100vh', 
+    width: '100vw',
     flexDirection: 'column',
+    justifyContent: 'center',
+    overflow: 'auto',
+    backgroundColor: '#7d7c79',
   },
-  resumeContent: {
+  appContainerHorizontalCenter: {
     display: 'flex',
     flexDirection: 'row',
-    flex: '1 1 100%',
+    justifyContent: 'center',
+    width: '100%',
   },
+  downloadButtonContainer: {
+    position: 'absolute',
+    bottom: '10px',
+    right: '10px',
+  },
+  downloadButton: {
+    height: '50px',
+    width: '50px',
+    lineHeight: '50px',
+    backgroundColor: '#3963fa',
+    color: 'white',
+    borderRadius: '50%',
+    display: 'inline-block',
+    textAlign: 'center',
+  }
 }));
 
 function App() {
   const classes = useStyles();
+  const params = (new URL(document.location)).searchParams;
+  const formatToPrint = params.get('formatToPrint');
+  
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <article className={classes.resume}>
-        <Header />
-        <div className={classes.resumeContent}>
-          <SideBar />
-          <MainContent />
+      <div className={!formatToPrint && classes.appContaineVerticalCenter}>
+        <div className={!formatToPrint && classes.appContainerHorizontalCenter}>
+          <Resume />
         </div>
-      </article>
+        {!formatToPrint && (
+          <div class={classes.downloadButtonContainer}>
+          <a href="/mark_tutkowski.pdf" download>
+            <IconButton color="secondary" variant="outlined" aria-label="Download Resume" component="span">
+              <ArrowDownward />
+            </IconButton>
+          </a>
+        </div>
+        )}
+      </div>
+      
     </ThemeProvider>
   );
 }

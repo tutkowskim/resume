@@ -7,15 +7,6 @@
     <meta name="viewport" content="width=device-width" />
     <meta charset="UTF-8">
     <link rel="icon" href="https://www.tutkowski.com/favicon.svg" />
-    <link rel="stylesheet" href="index.css"> 
-    <!-- Redirect mobile users to the pdf -->
-    <script type="text/javascript">
-      if (screen.width <= 699) {
-        document.location = "/mark_tutkowski.pdf";
-      }
-    </script>
-    <!-- Font awesome for download icon -->
-    <script src="https://kit.fontawesome.com/cb93a9a049.js" crossorigin="anonymous"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLR13ELTRG"></script>
     <script>
@@ -27,17 +18,6 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="app-container">
-      <div class="resume-container">
-        <iframe class="resume" src="/resume.html" width="100%" height="100%" frameBorder="0" scrolling="no"></iframe>
-      </div>
-    </div>
-    <div class="download-button-container">
-      <a href="/mark_tutkowski.pdf" download>
-        <div class="download-button" title="Download Resume" alt="Download Resume">
-          <span><i class="fa fa-download"></i></span>
-        </div>
-      </a>
-    </div>
+    <div id="root"></div>
   </body>
 </html>

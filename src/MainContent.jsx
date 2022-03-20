@@ -9,10 +9,11 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     flex: '1 1 auto',
-    marginLeft: '2rem',
-    marginRight: '2rem',
+    paddingLeft: '2rem',
+    paddingRight: '2rem',
     overflow: 'hidden',
     gap: '0.25rem',
+    background: 'white',
   },
 }));
 
