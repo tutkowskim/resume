@@ -27,16 +27,6 @@ const useStyles = makeStyles(() => ({
     position: 'absolute',
     bottom: '10px',
     right: '10px',
-  },
-  downloadButton: {
-    height: '50px',
-    width: '50px',
-    lineHeight: '50px',
-    backgroundColor: '#3963fa',
-    color: 'white',
-    borderRadius: '50%',
-    display: 'inline-block',
-    textAlign: 'center',
   }
 }));
 
