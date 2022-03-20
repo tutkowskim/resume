@@ -1,12 +1,10 @@
 import React from 'react';
-import { CssBaseline, ThemeProvider, StyledEngineProvider, IconButton } from '@mui/material';
+import { CssBaseline, ThemeProvider, StyledEngineProvider } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
-import {
-  ArrowDownward
-} from '@mui/icons-material';
 
 import theme from './theme';
 import Resume from './Resume';
+import DownloadButton from './DownloadButton';
 
 const useStyles = makeStyles(() => ({
   appContaineVerticalCenter: {
@@ -23,6 +21,16 @@ const useStyles = makeStyles(() => ({
     flexDirection: 'row',
     justifyContent: 'center',
     width: '100%',
+  },
+  ['@media only screen and (max-height: 11in)']: { // eslint-disable-line no-useless-computed-key
+    appContaineVerticalCenter: {
+      display: 'block',
+    }
+  },
+  ['@media only screen and (max-width: 8.5in)']: { // eslint-disable-line no-useless-computed-key
+    appContainerHorizontalCenter: {
+      display: 'block',
+    }
   },
   downloadButtonContainer: {
     position: 'absolute',
@@ -45,23 +53,15 @@ function App() {
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        
         <div className={!formatToPrint && classes.appContaineVerticalCenter}>
           <div className={!formatToPrint && classes.appContainerHorizontalCenter}>
             <Resume />
           </div>
           {!formatToPrint && (
             <div class={classes.downloadButtonContainer}>
-            <a href="/mark_tutkowski.pdf" download>
-              <IconButton
-                color="secondary"
-                variant="outlined"
-                aria-label="Download Resume"
-                component="span"
-                size="large">
-                <ArrowDownward />
-              </IconButton>
-            </a>
-          </div>
+              <DownloadButton />
+            </div>
           )}
         </div>
         
