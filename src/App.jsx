@@ -34,6 +34,11 @@ function App() {
   const classes = useStyles();
   const params = (new URL(document.location)).searchParams;
   const formatToPrint = params.get('formatToPrint');
+
+  // Redirect mobile users to the pdf
+  if (window.screen.width <= 699) {
+    document.location = "/mark_tutkowski.pdf";
+  }
   
   return (
     <ThemeProvider theme={theme}>
