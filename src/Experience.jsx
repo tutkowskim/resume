@@ -3,7 +3,7 @@ import CredentialGroup from './CredentialGroup';
 import { experience } from './data';
 
 function Experience() {
-  const credentials = experience.map((exp) => ({
+  const credentials = experience.filter((exp) => !exp.hidden).map((exp) => ({
     name: exp.title,
     from: exp.company,
     date: (

@@ -1,26 +1,32 @@
 import React from 'react';
-import { Typography } from '@mui/material';
+import { Chip } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 import Group from './Group';
 import { skills } from './data';
 
 const useStyles = makeStyles(() => ({
   skills: {
-    margin: '0rem',
-    paddingLeft: '1rem',
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: '0.25rem',
   },
 }));
 
 function Skills() {
   const classes = useStyles();
   return (
-    <Group title="Skills">
-      <ul className={classes.skills}>
-        {skills.map((item) => (
-          <li key={item}><Typography variant="body2">{item}</Typography></li>
-        ))}
-      </ul>
-    </Group>
+    <>
+     {skills.map((skillsGroup) => (
+        <Group key={skillsGroup.groupName} title={`Skills (${skillsGroup.groupName})`}>
+          <div className={classes.skills} >
+          {skillsGroup.skills.map((item) => (
+            <Chip key={item} label={item} />
+          ))}
+          </div>
+        </Group>
+      ))}`
+    </>
   );
 }
 

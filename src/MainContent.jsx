@@ -3,8 +3,9 @@ import { Divider } from '@mui/material';
 
 import makeStyles from '@mui/styles/makeStyles';
 
+import Certifications from './Certifications';
 import Experience from './Experience';
-import Summary from './Summary';
+import Eduction from './Education';
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -23,9 +24,11 @@ function MainContent() {
   const classes = useStyles();
   return (
     <section className={classes.content}>
-      <Summary />
-      <Divider />
       <Experience />
+      <Divider />
+      <Eduction />
+      <Divider />
+      <Certifications />
     </section>
   );
 }

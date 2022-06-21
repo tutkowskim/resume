@@ -7,7 +7,7 @@ const experience = [
     roleDetails: [
       'Developed authorization features for a next generation software project',
       'Setup tooling to check for known security vulerabilities in supply chain',
-    ],
+    ]
   },
   {
     title: 'Software Engineer',
@@ -62,6 +62,7 @@ const experience = [
       "Created the View Designer's installation using the Wix Toolset",
       'Created provisioning scripts in puppet for test and build agents',
     ],
+    hidden: true,
   },
 ];
 
