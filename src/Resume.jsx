@@ -9,8 +9,8 @@ function Resume() {
     <article className="resume">
       <Header />
       <div className="resume-content">
-        <SideBar />
         <MainContent />
+        <SideBar />
       </div>
     </article>
   )
