@@ -6,7 +6,7 @@ const experience = [
     endDate: 'Present',
     roleDetails: [
       'Developed authorization features for a next generation software project',
-      'Setup tooling to check for known security vulerabilities in supply chain',
+      'Setup tooling to check for known security vulnerabilities in supply chain',
     ]
   },
   {
