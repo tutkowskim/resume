@@ -1,12 +1,10 @@
 const certifications = [
   {
     name: 'Google Data Analytics Certificate',
-    from: 'Coursera',
     date: 'July 2022',
   },
   {
-    name: 'CySec Specialist (TÜV Rheinland)',
-    from: 'TÜV Rheinland',
+    name: 'CySec Specialist (TÜV Rheinland) # 630/22 - Components',
     date: 'June 2022',
   },
 ];

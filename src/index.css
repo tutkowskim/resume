@@ -149,7 +149,7 @@ ul li:before {
 .side-bar-content {
   display: flex;
   flex-direction: column;
-  width: 2in;
+  width: 1.75in;
   margin-left: 2rem;
   margin-right: 2rem;
   overflow: hidden;

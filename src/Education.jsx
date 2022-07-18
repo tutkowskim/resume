@@ -16,7 +16,7 @@ function Eduction() {
     details: ed.details,
   }));
   return (
-    <CredentialGroup name="Education" credentials={credentials} />
+    <CredentialGroup name="Education" credentials={credentials} predicate="from" />
   );
 }
 

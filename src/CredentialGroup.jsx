@@ -1,17 +1,22 @@
 import React from 'react';
 import Group from './Group';
 
-function CredentialGroup({ name, credentials }) {
+function CredentialGroup({ name, credentials, predicate }) {
   return (
     <Group title={name}>
-      {credentials.map((credential) => (
-        <div key={credential.date}>
-          <div>
-            <div>
-              <label><span>{credential.name}</span></label>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+        {credentials.map((credential) => (
+          <div key={credential.date}>
+            <div style={{ display: 'flex' }}>
+              <label style={{ flexGrow: '1' }}>
+                <span>{credential.name}</span>
+                { predicate && <span>{' '}</span>}
+                { predicate && <span>{predicate}</span>}
+                { predicate && <span>{' '}</span>}
+                { predicate && <span>{credential.from}</span>}
+              </label>
               <label>{credential.date}</label>
             </div>
-            <label>{credential.from}</label>
             {credential.details && credential.details.length > 0 && (
               <ul>
                 {credential.details.map((detail) => (
@@ -20,8 +25,8 @@ function CredentialGroup({ name, credentials }) {
               </ul>
             )}
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </Group>
   );
 }

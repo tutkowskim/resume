@@ -16,7 +16,7 @@ function Experience() {
     details: exp.roleDetails,
   }));
   return (
-    <CredentialGroup name="Experience" credentials={credentials} />
+    <CredentialGroup name="Experience" credentials={credentials} predicate="at" />
   );
 }
 
