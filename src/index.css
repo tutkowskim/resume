@@ -168,10 +168,10 @@ ul li:before {
 
 .chip {
   display: inline-block;
-  padding: 0 20px;
-  height: 40px;
+  padding: 0 18px;
+  height: 36px;
   font-size: 12px;
-  line-height: 40px;
-  border-radius: 20px;
+  line-height: 36px;
+  border-radius: 18px;
   background-color: rgba(0, 0, 0, 0.08);
 }

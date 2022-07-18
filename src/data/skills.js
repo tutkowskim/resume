@@ -20,8 +20,8 @@ const skills = [
     skills: [
       'C++',
       'C#',
-      'Go',
       'Python',
+      'Go',
       'Jupyter Notebooks'
     ],
   },
