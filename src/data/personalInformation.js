@@ -9,11 +9,11 @@ const personalInformation = {
   },
   linkedIn: {
     url: 'https://www.linkedin.com/in/marktutkowski',
-    display: 'marktutkowski',
+    display: 'www.linkedin.com/in/marktutkowski',
   },
   github: {
     url: 'https://www.github.com/tutkowskim',
-    display: 'tutkowskim',
+    display: 'www.github.com/tutkowskim',
   },
 };
 

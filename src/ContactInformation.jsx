@@ -1,66 +1,43 @@
 import React from 'react';
-import { Typography, Link } from '@mui/material';
-
-import makeStyles from '@mui/styles/makeStyles';
-
-import {
-  Phone,
-  Web,
-  MailOutline,
-  LinkedIn,
-  GitHub,
-} from '@mui/icons-material';
-
-import Group from './Group';
+import { faPhone, faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { personalInformation } from './data';
 
-const useStyles = makeStyles(() => ({
-  link: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  icon: {
-    height: '16px',
-    paddingRight: '0.5rem;',
-  },
-}));
-
 function ContactInformation() {
-  const classes = useStyles();
-
   return (
-    <Group title="Contact Info">
-      <Typography variant="subtitle2">
-        <Link className={classes.link} href={`tel:${personalInformation.phoneNumber}`} color="inherit" variant="body2">
-          <Phone className={classes.icon} />
+    <>
+      <label>
+        <a className="contact-info-link" href={`tel:${personalInformation.phoneNumber}`} color="inherit" variant="body2">
+          <FontAwesomeIcon icon={faPhone} />
           <span>{personalInformation.phoneNumber}</span>
-        </Link>
-      </Typography>
-      <Typography variant="subtitle2">
-        <Link className={classes.link} target="_blank" href={`mailto:${personalInformation.email}`} rel="noreferrer" color="inherit" variant="body2">
-          <MailOutline className={classes.icon} />
+        </a>
+      </label>
+      <label>
+        <a className="contact-info-link" target="_blank" href={`mailto:${personalInformation.email}`} rel="noreferrer" color="inherit" variant="body2">
+          <FontAwesomeIcon icon={faEnvelope} />
           <span>{personalInformation.email}</span>
-        </Link>
-      </Typography>
-      <Typography variant="subtitle2">
-        <Link className={classes.link} target="_blank" href={personalInformation.website.url} rel="noreferrer" color="inherit" variant="body2">
-          <Web className={classes.icon} />
+        </a>
+      </label>
+      <label>
+        <a className="contact-info-link" target="_blank" href={personalInformation.website.url} rel="noreferrer" color="inherit" variant="body2">
+          <FontAwesomeIcon icon={faGlobe} />
           <span>{personalInformation.website.display}</span>
-        </Link>
-      </Typography>
-      <Typography variant="subtitle2">
-        <Link className={classes.link} target="_blank" href={personalInformation.linkedIn.url} rel="noreferrer" color="inherit" variant="body2">
-          <LinkedIn className={classes.icon} />
+        </a>
+      </label>
+      <label>
+        <a className="contact-info-link" target="_blank" href={personalInformation.linkedIn.url} rel="noreferrer" color="inherit" variant="body2">
+          <FontAwesomeIcon icon={faLinkedin} />
           <span>{personalInformation.linkedIn.display}</span>
-        </Link>
-      </Typography>
-      <Typography variant="subtitle2">
-        <Link className={classes.link} target="_blank" href={personalInformation.github.url} rel="noreferrer" color="inherit" variant="body2">
-          <GitHub className={classes.icon} />
+        </a>
+      </label>
+      <label>
+        <a className="contact-info-link" target="_blank" href={personalInformation.github.url} rel="noreferrer" color="inherit" variant="body2">
+          <FontAwesomeIcon icon={faGithub} />
           <span>{personalInformation.github.display}</span>
-        </Link>
-      </Typography>
-    </Group>
+        </a>
+      </label>
+    </>
   );
 }
 

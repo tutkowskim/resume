@@ -1,20 +1,13 @@
 import React from 'react'
-import { Download } from '@mui/icons-material';
-import { IconButton } from '@mui/material';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function DownloadButton() {
     return (
         <a href="/mark_tutkowski.pdf" download>
-            <IconButton
-                    color="secondary"
-                    variant="outlined"
-                    aria-label="Download Resume"
-                    component="span"
-                    size="large">
-                <Download />
-            </IconButton>
+            <FontAwesomeIcon aria-label="Download Resume" icon={faDownload} />
         </a>
-    )
+    );
 }
 
 export default DownloadButton

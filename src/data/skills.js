@@ -2,19 +2,27 @@ const skills = [
   { 
     groupName: "Proficient",
     skills: [
+      'Node.js',
       'Typescript',
       'Java',
+      'Git',
+      'Gradle',
       'React',
       'Angular',
       'GraphQL',
-      'SQL'
+      'SQL',
+      'Agile',
+      'SAFe'
     ],
   },
   { 
     groupName: "Familiar",
     skills: [
       'C++',
+      'C#',
+      'Go',
       'Python',
+      'Jupyter Notebooks'
     ],
   },
   { 
