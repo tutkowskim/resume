@@ -5,7 +5,7 @@ const certifications = [
   },
   {
     name: 'CySec Specialist (TÜV Rheinland) # 630/22 - Components',
-    date: 'June 2022',
+    date: 'May 2022',
   },
 ];
 
