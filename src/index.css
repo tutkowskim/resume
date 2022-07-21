@@ -88,18 +88,6 @@ ul li:before {
   width: 100%;
 }
 
-@media only screen and (max-height: 11in) {
-  .appContainerVerticalCenter {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 8.5in) {
-  .appContainerHorizontalCenter {
-    display: block;
-  }
-}
-
 .downloadButtonContainer {
   position: absolute;
   bottom: 10px;
@@ -168,10 +156,36 @@ ul li:before {
 
 .chip {
   display: inline-block;
-  padding: 0 18px;
-  height: 36px;
+  padding: 0 9px;
+  height: 18px;
   font-size: 12px;
-  line-height: 36px;
-  border-radius: 18px;
+  line-height: 18px;
+  border-radius: 9px;
   background-color: rgba(0, 0, 0, 0.08);
+}
+
+@media only screen and (max-height: 11in) {
+  .appContainerVerticalCenter {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 8.5in) {
+  .appContainerHorizontalCenter {
+    display: block;
+  }
+}
+
+@media only print {
+  .appContainerVerticalCenter {
+    display: block;
+  }
+
+  .appContainerHorizontalCenter {
+    display: block;
+  }
+
+  .downloadButtonContainer {
+    display: none;
+  }
 }

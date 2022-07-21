@@ -25,7 +25,7 @@ const generatePdfFromUrl = async (url) => {
   return pdf;
 }
 
-const sourceHtmlUrl = 'http://localhost:3000?formatToPrint=true';
+const sourceHtmlUrl = 'http://localhost:3000';
 
 const pdfName = 'mark_tutkowski.pdf'
 const buildDir = path.join(__dirname, 'build');
