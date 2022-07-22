@@ -11,6 +11,9 @@ const skills = [
       'Angular',
       'GraphQL',
       'SQL',
+      'MYSql',
+      'SQLite',
+      'Postgresql',
       'Agile',
       'SAFe'
     ],
@@ -22,7 +25,8 @@ const skills = [
       'C#',
       'Python',
       'Go',
-      'Jupyter Notebooks'
+      'Jupyter Notebooks',
+      'MongoDB',
     ],
   },
   { 
