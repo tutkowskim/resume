@@ -179,10 +179,12 @@ ul li:before {
 @media only print {
   .appContainerVerticalCenter {
     display: block;
+    overflow: hidden;
   }
 
   .appContainerHorizontalCenter {
     display: block;
+    overflow: hidden;
   }
 
   .downloadButtonContainer {
