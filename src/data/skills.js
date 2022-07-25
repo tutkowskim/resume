@@ -6,6 +6,8 @@ const skills = [
       'Typescript',
       'Java',
       'Git',
+      'Gitlab',
+      'Github',
       'Gradle',
       'React',
       'Angular',
@@ -15,7 +17,8 @@ const skills = [
       'SQLite',
       'Postgresql',
       'Agile',
-      'SAFe'
+      'SAFe',
+      'Rest'
     ],
   },
   { 
@@ -23,9 +26,12 @@ const skills = [
     skills: [
       'C++',
       'C#',
+      'Kotlin',
+      'Kubernetes',
       'Python',
       'Go',
       'Jupyter Notebooks',
+      'Terraform',
       'MongoDB',
     ],
   },

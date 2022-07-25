@@ -9,7 +9,7 @@ function Skills() {
      {skills.map((skillsGroup) => (
         <Group key={skillsGroup.groupName} title={`Skills (${skillsGroup.groupName})`}>
           <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '0.25rem' }}>
-          {skillsGroup.skills.map((item) => (
+          {[...skillsGroup.skills].sort().map((item) => (
             <Chip key={item} label={item} />
           ))}
           </div>
