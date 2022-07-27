@@ -48,11 +48,6 @@ a, a:hover, a:visited, a:focus {
   color: inherit;
 }
 
-p {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
 ul {
   list-style: none;
   padding: 0px;
