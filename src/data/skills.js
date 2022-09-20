@@ -30,7 +30,6 @@ const skills = [
       'Kubernetes',
       'Python',
       'Go',
-      'Jupyter Notebooks',
       'Terraform',
       'MongoDB',
     ],
@@ -38,8 +37,9 @@ const skills = [
   { 
     groupName: "Learning",
     skills: [
-      'R',
-      'Azure'
+      'Swift',
+      'SwiftUI',
+      'iOS Development'
     ],
   },
 ];
