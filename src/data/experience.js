@@ -5,6 +5,7 @@ const experience = [
     startDate: 'Feb 2022',
     endDate: 'Present',
     roleDetails: [
+      'Developed features for a distributed test automation system',
       'Developed authorization features for a next generation software project',
       'Setup tooling to check for known security vulnerabilities in supply chain',
     ]
