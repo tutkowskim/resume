@@ -43,7 +43,8 @@ serve.stdout.on('data', (data) => {
           fs.writeFileSync(buildDirPdf, buffer);
           fs.writeFileSync(devDirPdf, buffer);
           console.log('Killing serve')
-          serve.kill();
+          serve.kill(9);
+          process.exit(0);
         });
   }
 });
