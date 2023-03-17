@@ -4,9 +4,8 @@ import { experience } from './data';
 
 function Experience() {
   const credentials = experience.filter((exp) => !exp.hidden).map((exp) => ({
-    name: exp.title,
-    from: exp.company,
-    date: (
+    primary: `${exp.title} at ${exp.company}`,
+    secondary: (
       <>
         <span>{exp.startDate}</span>
         <span>{' - '}</span>
@@ -16,7 +15,7 @@ function Experience() {
     details: exp.roleDetails,
   }));
   return (
-    <CredentialGroup name="Experience" credentials={credentials} predicate="at" />
+    <CredentialGroup name="Experience" credentials={credentials} />
   );
 }
 

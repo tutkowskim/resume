@@ -4,9 +4,8 @@ import { education } from './data';
 
 function Eduction() {
   const credentials = education.map((ed) => ({
-    name: ed.degree,
-    from: ed.institution,
-    date: (
+    primary: `${ed.degree} from ${ed.institution}`,
+    secondary: (
       <>
         <span>{ed.startDate}</span>
         <span>{' - '}</span>
@@ -16,7 +15,7 @@ function Eduction() {
     details: ed.details,
   }));
   return (
-    <CredentialGroup name="Education" credentials={credentials} predicate="from" />
+    <CredentialGroup name="Education" credentials={credentials} />
   );
 }
 

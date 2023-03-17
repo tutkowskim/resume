@@ -5,9 +5,9 @@ const experience = [
     startDate: 'Feb 2022',
     endDate: 'Present',
     roleDetails: [
-      'Developed features for a distributed test automation system',
-      'Developed authorization features for a next generation software project',
-      'Setup tooling to check for known security vulnerabilities in supply chain',
+      'Developed features in Angular, Typescript, and GraphQL for an internal web application',
+      'Developed features for a distributed test automation system using Java, Python, and RabbitMQ',
+      'Created and maintained Gitlab CI pipelines for building, testing, deploying, and security scanning',
     ]
   },
   {
@@ -16,8 +16,9 @@ const experience = [
     startDate: 'April 2021',
     endDate: 'Feb 2022',
     roleDetails: [
-      'Developed UI components in React for internal applications',
-      'Developed backend services in Node.js for internal applications using kubernetes and aws lambda functions',
+      'Developed UI components in React for and internal web application',
+      'Developed backend services in Typescript for internal applications using kubernetes, aws lambda functions, and Kafka',
+      'Created and maintained Gitlab CI pipelines for building, testing, and deploying',
       'Performed reviews of code contributions and designs from my peers',
     ],
   },
@@ -28,8 +29,9 @@ const experience = [
     endDate: 'April 2021',
     roleDetails: [
       'Served as a team leader for an engineering team of 4 developers and 2 test engineers',
-      'Developed features in Angular, Kotlin, Typescript, and Node.js for a next generation software project',
-      'Developed features in Java, C#, and C++ for Studio 5000 View Designer',
+      'Developed features in Angular, Kotlin, Typescript, and GraphQL for a web application',
+      'Developed new features using Java, C#, and C++ for a desktop application',
+      'Developed new features using Java, C#, and C++ for an embedded application',
       'Mentored new engineers and student associates',
     ],
   },
@@ -39,9 +41,8 @@ const experience = [
     startDate: 'Oct 2016',
     endDate: 'May 2018',
     roleDetails: [
-      'Served as a team representative in the scrum of team architects for Studio 5000 View Designer',
-      'Developed features in Java, C#, and C++ for Studio 5000 View Designer',
-      'Received an innovation award for the design and development of the Download from Media feature for View Designer',
+      'Developed new features using Java, C#, and C++ for an desktop application',
+      'Developed new features using Java, C#, and C++ for an embedded application',
     ],
   },
   {
@@ -50,20 +51,9 @@ const experience = [
     startDate: 'June 2015',
     endDate: 'Oct 2016',
     roleDetails: [
-      'Developed features for Studio 5000 View Designer in C# and C++',
-      'Developed features for PanelView 5000 in C++',
+      'Developed new features using C#, C++, and Wix for an desktop application',
+      'Developed new features using C# and C++ for an embedded application',
     ],
-  },
-  {
-    title: 'Student Associate',
-    company: 'Rockwell Automation',
-    startDate: 'June 2012',
-    endDate: 'June 2015',
-    roleDetails: [
-      "Created the View Designer's installation using the Wix Toolset",
-      'Created provisioning scripts in puppet for test and build agents',
-    ],
-    hidden: true,
   },
 ];
 
