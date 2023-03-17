@@ -5,7 +5,9 @@ const skills = [
       'Node.js',
       'Typescript',
       'Java',
+      'Python',
       'Git',
+      'Jenkins',
       'Gitlab',
       'Github',
       'Gradle',
@@ -13,12 +15,17 @@ const skills = [
       'Angular',
       'GraphQL',
       'SQL',
+      'NoSQL',
       'MYSql',
       'SQLite',
       'Postgresql',
       'Agile',
       'SAFe',
-      'Rest'
+      'Rest',
+      'Test Automation',
+      'Linux',
+      'Windows',
+      'MacOS'
     ],
   },
   { 
@@ -28,18 +35,19 @@ const skills = [
       'C#',
       'Kotlin',
       'Kubernetes',
-      'Python',
       'Go',
       'Terraform',
       'MongoDB',
+      'Electron'
     ],
   },
   { 
     groupName: "Learning",
     skills: [
-      'Swift',
-      'SwiftUI',
-      'iOS Development'
+      'AI',
+      'Machine Learning',
+      'Neutral Networks',
+      'Deep Learning'
     ],
   },
 ];
