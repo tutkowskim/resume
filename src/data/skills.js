@@ -38,7 +38,8 @@ const skills = [
       'Go',
       'Terraform',
       'MongoDB',
-      'Electron'
+      'Electron',
+      'Figma'
     ],
   },
   { 
