@@ -5,7 +5,7 @@ const eduction = [
     startDate: 'Aug 2021',
     endDate: 'Present',
     details: [
-      "GPA: 4.00",
+      "GPA: 3.94",
     ],
   },
   {
