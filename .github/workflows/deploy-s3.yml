@@ -23,4 +23,4 @@ jobs:
 
       - name: Copy files to the s3 website content bucket
         run:
-          aws s3 sync build s3://${{ secrets.AWS_S3_BUCKET_NAME }}
+          aws s3 sync build s3://${{ secrets.AWS_S3_BUCKET_NAME }}/public
