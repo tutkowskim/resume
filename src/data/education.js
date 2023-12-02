@@ -3,7 +3,7 @@ const eduction = [
     degree: 'Masters of Computer Science',
     institution: 'UIUC',
     startDate: 'Aug 2021',
-    endDate: 'Present',
+    endDate: 'Dec 2023',
     details: [
       "GPA: 3.94",
     ],

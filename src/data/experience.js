@@ -1,12 +1,21 @@
 const experience = [
   {
+    title: 'Full Stack Software Engineer',
+    company: 'Zoox',
+    startDate: 'June 2023',
+    endDate: 'Present',
+    roleDetails: [
+      'Developed a tools for a support center using React, Node.js, and Twilio',
+      'Managed infrastructure using  terraform',
+    ]
+  },
+  {
     title: 'Senior Software Engineer',
     company: 'Rockwell Automation',
     startDate: 'Feb 2022',
-    endDate: 'Present',
+    endDate: 'June 2023',
     roleDetails: [
-      'Developed features in Angular, Typescript, and GraphQL for an internal web application',
-      'Developed features for a distributed test automation system using Java, Python, and RabbitMQ',
+      'Developed features for a distributed test automation system using Angular, Java, Python, and RabbitMQ',
       'Created and maintained Gitlab CI pipelines for building, testing, deploying, and security scanning',
     ]
   },
