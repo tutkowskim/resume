@@ -1,5 +1,5 @@
-import React from 'react';
 import { personalInformation } from './data';
+import ContactInformation from './ContactInformation';
 
 function Header() {
   return (
@@ -10,6 +10,7 @@ function Header() {
         <h6>{personalInformation.title}</h6>
       </div>
       <div>
+        <ContactInformation />
       </div>
     </div>
   );

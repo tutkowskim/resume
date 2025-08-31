@@ -1,4 +1,3 @@
-import React from 'react';
 import Group from './Group';
 
 function CredentialGroup({ name, credentials }) {

@@ -1,12 +1,10 @@
-import React from 'react';
 import { faPhone, faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Group from './Group';
 import { personalInformation } from './data';
 
 function ContactInformation() {
   return (
-    <Group title="Contact Information">
+    <div>
       <label>
         <a className="contact-info-link" href={`tel:${personalInformation.phoneNumber}`} color="inherit" variant="body2">
           <FontAwesomeIcon className="contact-info-icon" icon={faPhone} />
@@ -25,7 +23,7 @@ function ContactInformation() {
           <span>{personalInformation.website.display}</span>
         </a>
       </label>
-    </Group>
+    </div>
   );
 }
 

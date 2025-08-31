@@ -1,4 +1,3 @@
-import React from 'react';
 import CredentialGroup from './CredentialGroup';
 import { education } from './data';
 
@@ -14,6 +13,7 @@ function Eduction() {
     ),
     details: ed.details,
   }));
+  
   return (
     <CredentialGroup name="Education" credentials={credentials} />
   );

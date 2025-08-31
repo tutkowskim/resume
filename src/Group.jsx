@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Group({ title, children }) {
   return (
     <div style={{ marginTop: '0.625rem', marginBottom: '0.625rem' }}>

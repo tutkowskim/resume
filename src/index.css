@@ -148,16 +148,6 @@ ul li:before {
   background: white;
 }
 
-.chip {
-  display: inline-block;
-  padding: 0 9px;
-  height: 18px;
-  font-size: 12px;
-  line-height: 18px;
-  border-radius: 9px;
-  background-color: rgba(0, 0, 0, 0.08);
-}
-
 @media only screen and (max-height: 11in) {
   .appContainerVerticalCenter {
     display: block;

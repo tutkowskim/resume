@@ -1,7 +1,7 @@
 const personalInformation = {
   name: 'Mark Tutkowski',
   title: 'Software Engineer',
-  phoneNumber: '262-470-5215',
+  phoneNumber: '+1 (262) 470-5215',
   email: 'mark@tutkowski.com',
   website: {
     url: 'https://www.tutkowski.com',

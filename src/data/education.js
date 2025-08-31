@@ -1,7 +1,7 @@
 const eduction = [
   {
     degree: 'Masters of Computer Science',
-    institution: 'UIUC',
+    institution: 'University of Illinois Urbana-Champaign',
     startDate: 'Aug 2021',
     endDate: 'Dec 2023',
     details: [
@@ -10,7 +10,7 @@ const eduction = [
   },
   {
     degree: 'Bachelors of Science in Computer Engineering',
-    institution: 'MSOE',
+    institution: 'Milwaukee School of Engineering',
     startDate: 'Sept 2011',
     endDate: 'May 2015',
     details: [
