@@ -5,11 +5,11 @@ const experience = [
     startDate: 'June 2023',
     endDate: 'Present',
     roleDetails: [
-      'Designed and developed a user signup website to enable a soft launch',
-      'Developed a ride hailing application which a conceirage to hail an automaous vehicle on the behalf of a rider to enable a soft launch',
-      'Developed a support center application with vehicle integrations to enable rider support',
-      'Managed infrastructure using  terraform',
+      'Designed and developed a user signup website to enable a soft launch of a robotaxi service',
+      'Developed a ride hailing application which a conceirage to hail an automaous vehicle on the behalf of a rider',
+      'Developed a support center application powered by twilio and deep vehicle integrations to enable rider support operations',
       'Created metrics, dashboards, and alerting to enable proactive monitoring of distrubted services',
+      'Managed infrastructure using  terraform',
     ]
   },
   {
