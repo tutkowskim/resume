@@ -25,24 +25,22 @@ const generatePdfFromUrl = async (url) => {
   return pdf;
 }
 
-const sourceHtmlUrl = 'http://localhost:3000';
+const sourceHtmlUrl = 'http://localhost:8080';
 
 const pdfName = 'mark_tutkowski.pdf'
-const buildDir = path.join(__dirname, 'build');
+const buildDir = path.join(__dirname, 'src');
 const buildDirPdf = path.join(buildDir, pdfName);
-const devDirPdf = path.join(__dirname, 'public', pdfName)
 
-const serve = spawn('npx', ['serve', '-s', 'build']);
+const serve = spawn('npm', ['start']);
 serve.stdout.on('data', (data) => {
   console.log('serve - ' + data)
 
-  if (data.includes('Accepting connections')) {
-    console.log(`Generating PDF from ${sourceHtmlUrl} to ${buildDirPdf} and ${devDirPdf}`);
+  if (data.includes('Ready for changes')) {
+    console.log(`Generating PDF from ${sourceHtmlUrl} to ${buildDirPdf}`);
     generatePdfFromUrl(sourceHtmlUrl)
         .then(buffer => {
           fs.writeFileSync(buildDirPdf, buffer);
-          fs.writeFileSync(devDirPdf, buffer);
-          console.log('Killing serve')
+          console.log('Killing server')
           serve.kill(9);
           process.exit(0);
         });

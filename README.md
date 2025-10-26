@@ -1,2 +1,2 @@
 # Resume #
-My resume written in react.
+My resume written in raw html.
