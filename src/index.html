@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mark Tutkowski — Resume</title>
+    <meta name="description" content="Resume of Mark Tutkowski" />
+    <link rel="icon" href="/favicon.svg" />
+    <style>
+        :root {
+            --text: #0f172a;
+            /* slate-900 */
+            --muted: #475569;
+            /* slate-600 */
+            --accent: #334155;
+            /* slate-700 */
+            --rule: #e2e8f0;
+            /* slate-200 */
+            --chip-bg: #eef2ff;
+            /* indigo-50 */
+            --chip: #3730a3;
+            /* indigo-800 */
+            --link: #1d4ed8;
+            /* blue-600 */
+            --bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            font: 14px/1.45 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        a {
+            color: var(--link);
+            text-decoration: none
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 32px 24px
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 12px 24px;
+            align-items: center;
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 28px;
+            letter-spacing: .2px;
+            margin: 0
+        }
+
+        .role {
+            color: var(--muted);
+            font-weight: 600
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            justify-content: center
+        }
+
+        .contact a,
+        .contact span {
+            color: var(--muted)
+        }
+
+        /* Section */
+        section {
+            padding: 12px 0
+        }
+
+        h2 {
+            font-size: 14px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin: 0 0 10px;
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        .summary {
+            margin-top: 6px
+        }
+
+        /* Lists */
+        ul.reset {
+            list-style: none;
+            padding: 0;
+            margin: 0
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 6px 12px
+        }
+
+        .title {
+            font-weight: 700
+        }
+
+        .meta {
+            color: var(--muted);
+            white-space: nowrap
+        }
+
+        .bullets {
+            margin: 8px 0 0 0;
+            padding-left: 18px
+        }
+
+        .bullets li {
+            margin: 4px 0
+        }
+
+        /* Chips */
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px
+        }
+
+        .chip {
+            background: var(--chip-bg);
+            color: var(--chip);
+            padding: 4px 8px;
+            border-radius: 999px;
+            font-size: 12px;
+            border: 1px solid #c7d2fe
+        }
+
+        /* Two-column grid for Skills */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px 24px
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 8px 24px
+        }
+
+        /* Footer note */
+        footer {
+            border-top: 1px solid var(--rule);
+            margin-top: 8px;
+            padding-top: 8px;
+            color: var(--muted);
+            font-size: 12px
+        }
+
+        /* Print styles: fit nicely on one page, hide links underline, shrink margins */
+        @page {
+            margin: 0.2in
+        }
+
+        @media print {
+            body {
+                font-size: 12px
+            }
+
+            .container {
+                padding: 0.2in
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none
+            }
+
+            .chip {
+                border-color: #ddd
+            }
+        }
+
+        /* Small screens */
+        @media (max-width:640px) {
+            header {
+                grid-template-columns: 1fr
+            }
+
+            .contact {
+                justify-content: flex-start
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container" role="main">
+        <!-- ===== HEADER ===== -->
+        <header>
+            <div>
+                <h1>Mark Tutkowski</h1>
+                <div class="role">Software Engineer</div>
+            </div>
+        </header>
+
+        <!-- ===== SUMMARY ===== -->
+        <section aria-labelledby="summary">
+            <h2 id="summary">Summary</h2>
+            <p class="summary">Full-stack software engineer with 8+ years of experience delivering scalable distributed
+                platforms, CI/CD automation, and user-facing products. Passionate about autonomous mobility, applied and
+                agentic AI, and enabling high-quality customer experiences through resilient engineering practices.</p>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section aria-labelledby="skills">
+            <h2 id="skills">Skills</h2>
+            <div class="grid-3">
+                <div>
+                    <div class="title">Languages</div>
+                    <div class="chips">
+                        <span class="chip">TypeScript</span>
+                        <span class="chip">JavaScript</span>
+                        <span class="chip">Java</span>
+                        <span class="chip">Python</span>
+                        <span class="chip">C++</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="title">Frameworks</div>
+                    <div class="chips">
+                        <span class="chip">Angular</span>
+                        <span class="chip">React</span>
+                        <span class="chip">Node.js</span>
+                        <span class="chip">GraphQL</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="title">Cloud &amp; DevOps</div>
+                    <div class="chips">
+                        <span class="chip">AWS</span>
+                        <span class="chip">Docker</span>
+                        <span class="chip">Kubernetes</span>
+                        <span class="chip">Terraform</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCE ===== -->
+        <section aria-labelledby="experience">
+            <h2 id="experience">Experience</h2>
+
+            <article class="job" aria-labelledby="job-zoox">
+                <div class="row">
+                    <div class="title" id="job-zoox">Software Engineer • Zoox</div>
+                    <div class="meta">June 2023 — Present</div>
+                </div>
+                <ul class="bullets">
+                    <li>Delivered the rider signup experience that enabled the soft launch of the Zoox robotaxi service.</li>
+                    <li>Engineered a concierge ride-hailing workflow so support specialists can dispatch autonomous trips on behalf of users.</li>
+                    <li>Built a support center platform integrating Twilio tooling with vehicle telemetry to accelerate issue resolution.</li>
+                    <li>Implemented metrics, dashboards, and alerting to proactively monitor distributed mobility services.</li>
+                    <li>Managed Terraform-based infrastructure to standardize deployments across environments.</li>
+                </ul>
+            </article>
+
+            <article class="job" aria-labelledby="job-ra-2022">
+                <div class="row">
+                    <div class="title" id="job-ra-2022">Software Engineer • Rockwell Automation</div>
+                    <div class="meta">Feb 2022 — June 2023</div>
+                </div>
+                <ul class="bullets">
+                    <li>Shipped enhancements for a distributed test automation platform using Angular, Java, Python, and RabbitMQ.</li>
+                    <li>Owned GitLab CI pipelines covering build, test, security scanning, and deployment to harden release quality.</li>
+                </ul>
+            </article>
+
+            <article class="job" aria-labelledby="job-nm">
+                <div class="row">
+                    <div class="title" id="job-nm">Software Engineer • Northwestern Mutual</div>
+                    <div class="meta">April 2021 — Feb 2022</div>
+                </div>
+                <ul class="bullets">
+                    <li>Delivered modular React components for adviser-facing financial planning tools.</li>
+                    <li>Implemented TypeScript services on Kubernetes, AWS Lambda, and Kafka to automate internal workflows.</li>
+                    <li>Standardized GitLab CI pipelines to improve reliability across build, test, and deployment stages.</li>
+                    <li>Reviewed peer code and design proposals to maintain architectural consistency and quality.</li>
+                </ul>
+            </article>
+
+            <article class="job" aria-labelledby="job-ra">
+                <div class="row">
+                    <div class="title" id="job-ra-2018">Software Engineer • Rockwell Automation</div>
+                    <div class="meta">June 2015 — April 2021</div>
+                </div>
+                <ul class="bullets">
+                    <li>Led a six-person engineering team delivering releases for Rockwell Automation web, desktop, and embedded control products.</li>
+                    <li>Modernized Rockwell design software—shipping C#/C++ desktop releases before leading the Angular/Kotlin web rewrite that replaced the legacy product.</li>
+                    <li>Mentored engineers and student associates, codifying reusable patterns adopted across the product portfolio.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- ===== EDUCATION ===== -->
+        <section aria-labelledby="education">
+            <h2 id="education">Education</h2>
+            <div class="row">
+                <div class="title">Master of Computer Science • University of Illinois Urbana‑Champaign</div>
+                <div class="meta">Aug 2021 — Dec 2023</div>
+            </div>
+            <div class="muted">GPA: 3.94</div>
+
+            <div class="row" style="margin-top:8px">
+                <div class="title">Bachelor of Science in Computer Engineering • Milwaukee School of Engineering</div>
+                <div class="meta">Sept 2011 — May 2015</div>
+            </div>
+            <div class="muted">GPA: 3.29 (Major GPA: 3.52) • Graduated with Honors • Minor in Mathematics</div>
+        </section>
+
+        <footer>
+            <div class="contact" aria-label="contact and links">
+                <a href="mailto:mark@tutkowski.com">mark@tutkowski.com</a>
+                <span>•</span>
+                <a href="tel:+12624705215">+1 (262) 470-5215</a>
+                <span>•</span>
+                <a href="https://www.linkedin.com/in/marktutkowski">www.linkedin.com/in/marktutkowski</a>
+                <span>•</span>
+                <a href="https://www.github.com/tutkowskim">github.com/tutkowskim</a>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
