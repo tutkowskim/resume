@@ -5,7 +5,7 @@
   "dependencies": {
   },
   "devDependencies": {
-    "puppeteer": "24.17.1",
+    "puppeteer": "24.27.0",
     "live-server": "1.2.2"
   },
   "scripts": {
